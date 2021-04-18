@@ -4,7 +4,6 @@
 
 2. Grup pe skype ( fiecare să-și instaleze skype ). Join link: https://platforma.scoalainformala.ro/mod/url/view.php?id=78138
 
-
 3. Cont de github  
 
 4. Instalarea git tool.
