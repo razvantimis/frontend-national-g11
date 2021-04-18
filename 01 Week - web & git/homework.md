@@ -10,4 +10,4 @@ Sa se creeze urmatoarele
 - article.html
 4. Se va face un pull request
 5. Link-ul de la pull request il punem la homework pe platforma
-6. Dupa ce aveti approv-ul meu, facem merge in main
+6. Dupa ce aveti approv-ul meu, facem merge in branch-ul main
