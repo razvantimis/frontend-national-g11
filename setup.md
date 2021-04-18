@@ -2,7 +2,7 @@
 
 1. Visual studio code - download link: https://code.visualstudio.com/download
 
-2. Grup pe skype ( fiecare să-și instaleze skype ). Join link: https://join.skype.com/K7iQTTvb09If
+2. Grup pe skype ( fiecare să-și instaleze skype ). Join link: https://platforma.scoalainformala.ro/mod/url/view.php?id=78138
 
 
 3. Cont de github  
@@ -28,4 +28,4 @@
 4. Dupa instalare, deschidem un terminal ( cmd, git bash ) si rulam 'git --version'
 
 
-Link google sheet: https://docs.google.com/spreadsheets/d/13zNHoT_xPsIcsuejNlujEdnfcqqhav0qLLFIZnrPOhU/edit?usp=sharing
+Link google sheet: https://platforma.scoalainformala.ro/mod/url/view.php?id=78044
