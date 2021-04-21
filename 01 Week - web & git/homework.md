@@ -2,8 +2,8 @@
 ## Deadline: 25.04.2021 ora 23:59 
 Sa se creeze urmatoarele
 1. Un github repo numit SIIT_Fistname_Lastname ( nu uitati sa ma adaugati la colaboratori )
-2. Un branch numit `week01_my-blog`
-3. Facem un folder week01
+2. Un branch numit `01_week_my-blog`
+3. Facem un folder 01_week
 3. In folder facem trei fisiere goale:
 - home.html
 - about.html
