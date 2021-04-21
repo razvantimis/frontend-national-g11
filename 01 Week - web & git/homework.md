@@ -3,8 +3,8 @@
 Sa se creeze urmatoarele
 1. Un github repo numit SIIT_Fistname_Lastname ( nu uitati sa ma adaugati la colaboratori )
 2. Un branch numit `01_week_my-blog`
-3. Facem un folder 01_week
-3. In folder facem trei fisiere goale:
+3. Facem un folder 01_week iar dupa al folder my_blog
+3. In folder my_blog facem trei fisiere goale:
 - home.html
 - about.html
 - article.html
