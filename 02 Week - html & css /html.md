@@ -8,3 +8,6 @@
 7. Tabindex => pentru navigrarea folosim tab
 
 
+Workshop figma link: https://www.figma.com/file/KEq4LBywk5DzFHF91KYezu/YouTube?node-id=0%3A1
+
+
