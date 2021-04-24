@@ -1,4 +1,4 @@
-# Website cu tematica
+# Blog cu tematica
 ## Deadline 05.05.2021 18:30
 
 ## Mod de lucru
