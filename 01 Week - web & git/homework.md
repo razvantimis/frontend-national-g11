@@ -1,4 +1,4 @@
-## Blog - Workflow homework
+# Blog - Workflow homework
 ## Deadline: 25.04.2021 ora 23:59 
 Sa se creeze urmatoarele
 1. Un github repo numit SIIT_Fistname_Lastname ( nu uitati sa ma adaugati la colaboratori )
