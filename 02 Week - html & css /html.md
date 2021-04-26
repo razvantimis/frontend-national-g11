@@ -5,7 +5,7 @@
 3. `<header>, <nav>, <main> ,<article>, <section> <aside>, <footer>`
 4. `<a> <img>`
 6. `<form> => <label> <input>, <select> <option>, <textarea>`
-7. Tabindex => pentru navigrarea folosim tab
+7. Tabindex => pentru navigarea folosim tab
 
 
 Workshop figma link: https://www.figma.com/file/KEq4LBywk5DzFHF91KYezu/YouTube?node-id=0%3A1
