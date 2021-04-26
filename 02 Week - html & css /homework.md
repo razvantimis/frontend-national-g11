@@ -32,7 +32,7 @@ Tematica poate fi alesa de catre voi, cateva sugestii: retete culinare, educatie
 ## Pe ce lucra fiecare
 1. M1 va lucra pe home.html & contact.html
 
-2. M2 va lucra pe post-one.html, post-two.html 
+2. M2 va lucra pe post-one.html, post-two.html - plus lista de pe home
 
 ## Cel mai importanta este sa comunicatii pe skype/zoom 
 ## Distractie!
