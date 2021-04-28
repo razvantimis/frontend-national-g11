@@ -33,9 +33,16 @@
   <!-- Daca selectam Intermediate se pun in query params level=2  -->
   <form>
     <select name="level">
-      <option value="1" selected>Beginner</option>
-      <option value="2">Intermediate</option>
-      <option value="3">Advanced</option>
+      <optgroup label="Level">
+        <option value="1" selected>Beginner</option>
+        <option value="2">Intermediate</option>
+        <option value="3">Advanced</option>
+      </optgroup>
+      <optgroup label="Test">
+        <option>Diplodocus</option>
+        <option>Saltasaurus</option>
+        <option>Apatosaurus</option>
+      </optgroup>
     </select>
     <input type="submit" value="Submit" />
   </form>
