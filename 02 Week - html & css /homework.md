@@ -6,6 +6,7 @@
     1. Numarul echipei va il gasiti in google sheets , unde sunt conturile de github
     2. M1 este prima persoana din echipa conform listei iar M2 a doua
 2. Se va folosit github lui M1 cu repo creeat la prima tema, va face face un branch din main numit week2_blog, va creat un folder 02_week ( va pune totul pe github ) 
+2. M2 face `git clone {url}` la repo lui M1
 3. M1 il va adauga la colaboration pe M2 
 4. Ambi vor lucra pe acelasi branch, 02_week, pentru implementare blogului
 5. La final vor face pull request in main iar link-ul de la pull request il pun la tema
