@@ -11,11 +11,13 @@
   border: 5px solid red;
   flex-grow: 0;
   flex-basis: 300px;
+  margin: 10px;
 }
 
 
+
 .container {
-  display: flex;
+  display: block;
   flex-direction: row;
   /* flex-start, flex-end, center, space-evenly, space-between */
   justify-content: flex-start;
