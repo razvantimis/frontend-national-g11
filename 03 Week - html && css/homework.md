@@ -19,7 +19,7 @@
  Se poate face si pentru restul de pagini partea de responsive
 
 
-Figma design: https://www.figma.com/file/FO2RgNsZtGg3MkwCU9SO2l/Blog?node-id=0%3A1
+## Figma design: https://www.figma.com/file/FO2RgNsZtGg3MkwCU9SO2l/Blog?node-id=0%3A1
 
 
 
