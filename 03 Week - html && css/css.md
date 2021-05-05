@@ -1,4 +1,4 @@
-## CSS 2
+## CSS Advanced
 0. Recap: css sintax, css selectors, box model, flex box
 1. Box model => Collapsing Margins => https://www.youtube.com/watch?v=4nGZ8OULcY0
 2. CSS Positioning => relative, absolute, fixed, static plus un exemplu cu z-index
