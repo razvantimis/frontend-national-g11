@@ -21,6 +21,7 @@
 }
 
 /* Position static */
-/* Position relative => top, right, left, bottom */
+/* Position relative => top, right, left, bottom + z-index */
 /* Position absolute */
 /* Position fixed */
+/* Position sticky */
