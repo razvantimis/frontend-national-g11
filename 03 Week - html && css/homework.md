@@ -9,7 +9,7 @@
 
 ## Specificati 
 
-1. Duplicati articolele de pe home, sa avem cel putin 20 
+1. Duplicati articolele de pe home, sa avem cel putin 20-30, ca sa avem scroll pe pagina 
 2. Este obligatoriu sa folosim flex box iar home page sa fie **responsive pentru mobile/tableta**
 3. Daca dam scroll in jos, **headerul sa raman fix**
 4. Jos de tot sa avem un button care ne duce sus, vezi in figma pagina home mobile (fara functionalitate)
