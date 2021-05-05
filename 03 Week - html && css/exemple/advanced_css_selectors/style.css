@@ -96,6 +96,13 @@ section {
   display: inline-block;
 }
 
+.pseudo-selectors .box {
+  height: 75px;
+  width: 75px;
+  background: rgba(0, 0, 0, .5);
+  display: inline-block;
+}
+
 
 
 
@@ -212,4 +219,21 @@ a[href*="google"] {
 
 a[href$=".ca"] {
   color: blue;
+}
+
+/* =================================
+   Attributes
+   ================================= */
+
+/* pseudo class */
+.pseudo-selectors a:hover {
+  color: red;
+}
+
+:target {
+  color: greenyellow;
+}
+
+.pseudo-selectors>.exemple-3 .box:nth-child(2) {
+  background-color: red;
 }
