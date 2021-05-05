@@ -1,7 +1,8 @@
 ## CSS 2
+0. Recap: css sintax, css selectors, box model, flex box
 1. Box model => Collapsing Margins => https://www.youtube.com/watch?v=4nGZ8OULcY0
 2. CSS Positioning => relative, absolute, fixed, static plus un exemplu cu z-index
-3. Advance Selectors => combinators :
+3. Advance Selectors => combinators : => https://www.youtube.com/watch?v=Bcr70LIJcOk
     1. Descendent selector => space, +
     2. Child selector => >, ~
     3. Universal selector => *
