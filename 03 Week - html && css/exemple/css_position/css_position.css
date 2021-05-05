@@ -1,4 +1,25 @@
 /* Box exemple */
+.box-container {
+  width: 500px;
+  height: 500px;
+  margin: 20px auto;
+  border: 5px solid grey;
+}
+
+.box1,
+.box2 {
+  height: 200px;
+  width: 200px;
+}
+
+.box1 {
+  background-color: red;
+}
+
+.box2 {
+  background-color: orange;
+}
+
 /* Position static */
 /* Position relative => top, right, left, bottom */
 /* Position absolute */
