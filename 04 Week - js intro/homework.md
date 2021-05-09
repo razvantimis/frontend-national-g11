@@ -1,6 +1,6 @@
 # Javascript Control Structures
 
-Using control structures, do the following:
+Using control structures (if, for, while), do the following::
 
 1. display in the console the numbers from 1 to 20
 2. display in the console the odd numbers from 1 to 20
