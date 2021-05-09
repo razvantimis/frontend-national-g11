@@ -135,24 +135,13 @@ section {
   color: green;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* =================================
    Adjacent siblings
    ================================= */
 
-
 .adjacent-sibling .box+.box {
   background: red;
+  margin-left: 15px;
 }
 
 
@@ -193,7 +182,7 @@ section {
 
 /* exact match */
 
-a[href] {
+.link-one[href] {
   color: darkblue;
 }
 
@@ -230,7 +219,12 @@ a[href$=".ca"] {
   color: red;
 }
 
-:target {
+#modal {
+  visibility: hidden;
+}
+
+#modal:target {
+  visibility: visible;
   color: greenyellow;
 }
 
