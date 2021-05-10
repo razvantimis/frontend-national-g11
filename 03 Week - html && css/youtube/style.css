@@ -76,3 +76,8 @@ main div {
   width: calc(100% - 200px);
   float: right;
 }
+
+
+button:target {
+  background-color: red;
+}
