@@ -215,7 +215,7 @@ a[href$=".ca"] {
    ================================= */
 
 /* pseudo class */
-.pseudo-selectors a:hover {
+.pseudo-selectors .link:hover {
   color: red;
 }
 
@@ -228,6 +228,14 @@ a[href$=".ca"] {
   color: greenyellow;
 }
 
-.pseudo-selectors>.exemple-3 .box:nth-child(2) {
+.pseudo-selectors>.exemple-3 .box:nth-child(2n) {
   background-color: red;
+}
+
+.pseudo-selectors>.exemple-3 .box:last-child {
+  background-color: hotpink;
+}
+
+.pseudo-selectors>.exemple-3 .box:not(.box-selected) {
+  background-color: hotpink;
 }
