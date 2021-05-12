@@ -1,6 +1,6 @@
 # 1. Javascript Basic
 1. Valori si Variabile
-2. Tipuri de date
+2. Tipuri de date - Primitive: string, number, boolean, null, undefined
 3. Operatori:
     1. operatii pe string-uri 
     2. operatii artimetice

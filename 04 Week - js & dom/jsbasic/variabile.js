@@ -11,6 +11,8 @@ console.log("Hello world")
 // CamelCase  => conventie pentru numele variabilelor
 
 var fullName = "Timis Razvan"; // sir de caractere - string
+var fullName2 = 'Timis Razvan'; // sir de caractere - string
+var fullName2 = `Timis Razvan`; // sir de caractere - string
 var number = 10; // -10, 10.34 - number
 var isMan = true // true | false - boolean
 var m1 = null; // nu existra continut in variabila
