@@ -17,4 +17,5 @@
 3. Modificare elementelor, operatii CRUD
 4. CSS manipulation
 5. Events
-6. Comment list workshop / homework
+6. TODO list workshop
+7. Comment box homework
