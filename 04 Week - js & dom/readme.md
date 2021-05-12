@@ -1,0 +1,18 @@
+# 1. Javascript Basic
+1. Valori si Variabile
+2. Tipuri de date
+3. Operatori:
+    1. operatii pe string-uri 
+    2. operatii artimetice
+    3. operatii logice
+4. Arrays and Objects
+5. Flow control: if, switch, for, while
+6. Function basic
+
+
+# 2. DOM 
+1. Ce este DOM?
+2. Cautarea elementelor
+3. Modificare elementelor, operatii CRUD
+4. CSS manipulation
+5. Events
