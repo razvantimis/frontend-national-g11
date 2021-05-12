@@ -18,4 +18,3 @@
 4. CSS manipulation
 5. Events
 6. TODO list workshop
-7. Comment box homework
