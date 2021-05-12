@@ -17,4 +17,4 @@
 3. Modificare elementelor, operatii CRUD
 4. CSS manipulation
 5. Events
-6. Comment list workshop
+6. Comment list workshop / homework
