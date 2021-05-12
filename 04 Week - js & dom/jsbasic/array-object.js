@@ -37,6 +37,7 @@ console.log("Person.isMan=", persoan.isMan)
 
 // add new key
 persoan.myNewKey = { key1: "value1", key2: 23 }
+persoan["3"] = 20;
 console.log("Add new key", persoan)
 
 // delete a key
