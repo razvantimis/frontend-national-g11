@@ -47,15 +47,20 @@ https://edabit.com/challenge/pPNAs5PvB3WvnDwDM
 
 # Mod de lucru
 
-Faceti un folder cu tema si acolo cate un fisier pentru fiecare solutie rezolvata, sa puneti si un commentari cu cerinta problemei + link
+Faceti un folder cu tema si cate un fisier easy.js, medium.js, hard.js cu solutile rezolvata, sa puneti si un commentari cu cerinta problemei + link
 
-De exemplu pentru link https://edabit.com/challenge/3LpBLgNRyaHMvNb4j faceti unn fisier easy1.js in care puneti la inceput
+De exemplu pentru link https://edabit.com/challenge/3LpBLgNRyaHMvNb4j faceti un fisier easy.js in care puneti la inceput
 
 ```js
+// 1
 // https://edabit.com/challenge/3LpBLgNRyaHMvNb4j
 // Create a function that takes two numbers as arguments and return their sum.
 
 Aici codul de js
+// 2
+// https://edabit.com/challenge/8q54MKnRrm89pSLmW
+aici cod js
+
 
 ```
 
