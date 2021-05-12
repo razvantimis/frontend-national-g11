@@ -1,13 +1,13 @@
 # 1. Javascript Basic
 1. Valori si Variabile
-2. Tipuri de date - Primitive: string, number, boolean, null, undefined
+2. Tipuri de date - Primitive: string, number, boolean, null - object, undefined - undefined
 3. Operatori:
     1. operatii pe string-uri 
     2. operatii artimetice
     3. operatii logice
     4. == vs ===
-4. Arrays and Objects
-5. Flow control: if, switch, for, while
+4. Arrays and Objects - structuri compose
+5. Flow control: if, for, switch, while
 6. Function basic
 7. JS Workshop BMI
 
