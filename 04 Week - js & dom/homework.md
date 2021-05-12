@@ -8,8 +8,7 @@ Using control structures (if, for, while), do the following::
 4. compute the maximum of the elements of an array and display it in the console 
 5. compute how many times a certain element appears in an array
 
-## Optinal
-Using nested for generate the following pattern
+6. Using nested control structures (for, while) for generate the following pattern
            0 1 0 1
 
            1 0 1 0

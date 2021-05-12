@@ -1,3 +1,5 @@
+# Optional
+
 Try resolving the tasks from every link.
 
 Easy:
@@ -41,4 +43,19 @@ Hard:
 https://edabit.com/challenge/c23dFfNiKbnguSQtq
 
 https://edabit.com/challenge/pPNAs5PvB3WvnDwDM
+
+
+# Mod de lucru
+
+Faceti un folder cu tema si acolo cate un fisier pentru fiecare solutie rezolvata, sa puneti si un commentari cu cerinta problemei + link
+
+De exemplu pentru link https://edabit.com/challenge/3LpBLgNRyaHMvNb4j faceti unn fisier easy1.js in care puneti la inceput
+
+```js
+// https://edabit.com/challenge/3LpBLgNRyaHMvNb4j
+// Create a function that takes two numbers as arguments and return their sum.
+
+Aici codul de js
+
+```
 
