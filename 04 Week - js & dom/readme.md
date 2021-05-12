@@ -5,10 +5,11 @@
     1. operatii pe string-uri 
     2. operatii artimetice
     3. operatii logice
+    4. == vs ===
 4. Arrays and Objects
 5. Flow control: if, switch, for, while
 6. Function basic
-
+7. JS Workshop BMI
 
 # 2. DOM 
 1. Ce este DOM?
@@ -16,3 +17,4 @@
 3. Modificare elementelor, operatii CRUD
 4. CSS manipulation
 5. Events
+6. Comment list workshop
