@@ -1,4 +1,4 @@
-# Optional
+# Edabit homework (Optional)
 
 Try resolving the tasks from every link.
 
