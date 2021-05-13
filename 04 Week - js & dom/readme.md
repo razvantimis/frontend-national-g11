@@ -6,7 +6,7 @@
     2. operatii artimetice
     3. operatii logice
     4. == vs ===
-4. Arrays and Objects - structuri compose
+4. Arrays and Objects - structuri compuse
 5. Flow control: if, for, switch, while
 6. Function basic
 7. JS Workshop BMI
