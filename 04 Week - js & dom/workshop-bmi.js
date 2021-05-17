@@ -36,6 +36,8 @@ if (bmi <= 18.5) {
   console.log("obese")
 }
 
+console.log(getBMIString(bmi));
+
 
 // daca avem o lista de persoana
 
@@ -66,6 +68,7 @@ var personList = [
   createPerson("p4", 1.86, 87)
 ];
 personList.push(createPerson("p5", 1.56, 47));
+personList.push("Nume persoana");
 
 // 2. parcurgem fiecare persoana
 function getBMIString(bmi) {
@@ -84,12 +87,24 @@ for (var i = 0; i < personList.length; i++) {
   var personCurrent = personList[i];
   var bmi = personCurrent.kg / (personCurrent.height * personCurrent.height);
 
+  // v2 fara function
+  var bmiString;
+  if (bmi <= 18.5) {
+    bmiString = "underweight"
+  } else if (bmi <= 25) {
+    bmiString = "normal"
+  } else if (bmi <= 30) {
+    bmiString = "overweight"
+  } else {
+    bmiString = "obese"
+  }
+
   console.log(
     "Name: ", personCurrent.name,
     " | BMI:", bmi,
-    " | BMI String:", getBMIString(bmi)
+    // " | BMI String:", getBMIString(bmi)
+    " | BMI string: ", bmiString
   )
-
 }
 
 
