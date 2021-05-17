@@ -58,8 +58,8 @@ console.log(true != true)
 var number = 10;
 var string = "10"
 
-console.log("number == string =>", number == string); // compara doar valorile fara type
-console.log("number === string =>", number === string);
+console.log("number == string =>", number == string); // => true,  compara doar valorile fara type
+console.log("number === string =>", number === string); // => false
 
 
 // typeof
