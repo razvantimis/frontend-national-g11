@@ -7,7 +7,8 @@
     3. operatii logice
     4. == vs ===
 4. Arrays and Objects - structuri compose
-5. Flow control: if, for, switch, while
+5. Flow control: if , for, switch, while, do {} while()
+7. Expression - ternary operator - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators
 6. Function basic
 7. JS Workshop BMI
 
