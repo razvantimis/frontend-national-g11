@@ -21,7 +21,7 @@ code was before you moved it in displayComments function)
   * Call displayComments function in the event listener for “add” button , right after
 you pushed the new object in comments array.
 
-* Remove Comment
+* Remove Comment ( Optional )
   * Set an attribute on “x” button with value set to comment id (e.g:
 data­value=”com1”), so you can identify which comment to remove from the array
   * Add event listener on “X” button

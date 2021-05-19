@@ -1,5 +1,7 @@
+var todoId = 0;
+
 var todoItem1 = {
-  id: 0,
+  id: todoId++,
   title: 'Todo 1',
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere ligula non nunc auctor, eu consectetur ante lobortis.'
 }
@@ -7,12 +9,12 @@ var todoItem1 = {
 var todoList = [
   todoItem1,
   {
-    id: 1,
+    id: todoId++,
     title: "Todo -----2",
     description: 'description 111123232'
   },
   {
-    id: 2,
+    id: todoId++,
     title: "Todo 3",
     description: 'description 2323'
   }
@@ -21,10 +23,10 @@ var todoList = [
 // afisare in DOM
 
 // va returna reprezentare unui TodoItem 
-function createTodoItemDiv(title, description) {
+function createTodoItemDiv(id, title, description) {
   var todoItemDiv = document.createElement('div')
 
-  todoItemDiv.setAttribute('data-id', 1)
+  todoItemDiv.setAttribute('data-id', id)
   todoItemDiv.style.background = 'grey'
 
   var todoTitleH2 = document.createElement('h2')
@@ -43,7 +45,7 @@ for (var index = 0; index < todoList.length; index++) {
   var todoItem = todoList[index];
 
   var todoListContainer = document.querySelector('.todo-list');
-  var todoItemDiv1 = createTodoItemDiv(todoItem.title, todoItem.description)
+  var todoItemDiv1 = createTodoItemDiv(todoItem.id, todoItem.title, todoItem.description)
   todoListContainer.appendChild(todoItemDiv1)
 }
 
@@ -59,7 +61,7 @@ btn.addEventListener('click', function (event) {
   console.log('Valoare din inputDescription:', inputDescription.value)
 
   var todoListContainer = document.querySelector('.todo-list');
-  var todoItemDiv1 = createTodoItemDiv(inputTitle.value, inputDescription.value)
+  var todoItemDiv1 = createTodoItemDiv(todoList.length, inputTitle.value, inputDescription.value)
   todoListContainer.appendChild(todoItemDiv1)
 })
 
