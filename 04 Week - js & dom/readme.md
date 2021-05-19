@@ -12,10 +12,3 @@
 6. Function basic
 7. JS Workshop BMI
 
-# 2. DOM 
-1. Ce este DOM?
-2. Cautarea elementelor
-3. Modificare elementelor, operatii CRUD
-4. CSS manipulation
-5. Events
-6. TODO list workshop
