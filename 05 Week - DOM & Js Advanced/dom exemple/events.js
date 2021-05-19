@@ -9,6 +9,9 @@ console.log(btn, input)
 
 btn.addEventListener('click', function (event) {
   // console.log(event)
+  // if (event.altKey) {
+  //   console.log('daca sa dat click + alt')
+  // }
   console.log('sa dat click pe button')
   console.log('Valoare din input:', input.value)
   // console.log(document.getElementById('event-input').value)
@@ -20,3 +23,12 @@ btn.addEventListener('click', function (event) {
 //   // event.target.value
 //   console.log(event.target.value)
 // })
+
+// alta metoda de a adauga un event
+// var btn2 = document.getElementById('btn2');
+
+function clickBtn2() {
+  console.log('am dat click pe btn2')
+}
+
+// btn2.onclick = clickBtn2;
