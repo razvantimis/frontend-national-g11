@@ -2,7 +2,7 @@
 //  JS Advanced
 //  Scope - Hoisting ( var vs let/const )
 
-// Scopul unei variabile (si function)
+// -----  Scopul unei variabile (si function) ------
 
 // 1. Global
 
@@ -120,6 +120,8 @@ function fn8() {
   console.log(myName)
 
   let myName;
+
+  // putem accesa myName doar dupa ce am declarat
 }
 
 // let/const pot fi accesate doar dupa ce le-am declarat
@@ -152,7 +154,7 @@ function fn10() {
 // caz2
 var index = 8888;
 function fn12() {
-  for (let index = 0; index < 10; index++) {
+  for (var index = 0; index < 10; index++) {
 
   }
   index = 999;
