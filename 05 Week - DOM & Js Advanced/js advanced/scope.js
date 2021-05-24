@@ -48,6 +48,8 @@ function fn3() {
   let vizibilaInToataFunctia = 10;
   if (true) {
     let myName = 'test'; // doar local in if
+    console.log(vizibilaInToataFunctia)
+    // in acest bloc oriunde mai jos
   }
   console.log(myName) // nu putem accesa myName aici
 }
@@ -122,3 +124,41 @@ function fn8() {
 
 // let/const pot fi accesate doar dupa ce le-am declarat
 // var pot fi accesate si inaite de a fi declarat ( hosting )
+
+
+
+// Lexical scope
+// orinde in cod mai jos, putem accesa orice definim sus
+var myVar1 = 10;
+
+function fn10() {
+  console.log(myVar1)
+}
+
+
+// caz 1
+// var global = 10; // scop global
+
+// function fn11() {
+//   global = 9999;
+
+//   //var global; // scopul local in function + hosting
+// }
+// fn11()
+// console.log(global) // 10
+
+
+
+// caz2
+var index = 8888;
+function fn12() {
+  for (let index = 0; index < 10; index++) {
+
+  }
+  index = 999;
+  // var index;
+
+}
+
+fn12();
+console.log(index)
