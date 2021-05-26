@@ -10,7 +10,10 @@ Pasi de implementare:
 3. User: va avea 3 button cu optiunile si el alege una dintre ele
 4. Trebui sa comparam alegerile si sa afisam rezultatul, adica cine castiga
 
-5. Implement “play” function that is a “Rock, paper, scissors” game. Aici va puteti gandi sa faceti un button start game doar doar dupa pasarea lui sa inceapa jocul
+## Obligatoriu
+
+0. Sa avem o functie play care da start jocului. Un button pe UI de start. Daca nu dam start, nu putem incepe sa jucam
+1. Sa pot juca jocul din pagina web, vom da posibilitatea utilizatorului sa aleaga o varianta dintre rock,paper, scissors
 
 ## Optional
 
