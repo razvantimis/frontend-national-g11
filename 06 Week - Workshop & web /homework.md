@@ -10,6 +10,8 @@ Pasi de implementare:
 3. User: va avea 3 button cu optiunile si el alege una dintre ele
 4. Trebui sa comparam alegerile si sa afisam rezultatul, adica cine castiga
 
+5. Implement “play” function that is a “Rock, paper, scissors” game.
+
 ## Optional
 
 1. Sa avem scorul pentru PC si User afisat pe ecran
