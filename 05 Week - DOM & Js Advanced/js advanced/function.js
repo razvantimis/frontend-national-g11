@@ -69,7 +69,83 @@ function fn4(params) {
 }
 
 // 2. Expression function / anonymous function / arrow function
+// anonymous function => nu definim numele
+var myFun = function () {
+
+} // tot avem hosting pentru ca am folosit "var"
+// apelam
+myFun();
+
+// const myFn2 = function(){}
+// nu mai avem hosting 
+
+// 2.1 anonymous function 
+
+// un modul
+(function () {
+  // izolam codul
+  function test() {
+
+  }
+  // add event to btn
+  // console.log('apelam direct functia')
+})();
+// test() // nu poate fi accesat
+
+// 2.2 ES6: arrow function - expresii
+
+const fn10 = () => 10 + 5;
+const fn11 = () => {
+
+  return 10 + 5;
+}
+
 // 4. Recursive functions
+// Functia se apeleaza pe ea
+// Trebuie sa avem o conditie de oprire a apelului recursiv
+// The Fibonacci Sequence is the series of numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+// fib(0) = 0
+// fib(1) = 1
+// fib(2) = fib(0) + fib(1)
+// fib(3) = fib(1) + fib(2)
+// fib(4) = fib(2) + fib(3) => fib(0) + fib(1) + fib(1) + fib(2) => ....
+
+// fib(7) => 13
+
+function fib(value) {
+  console.log(value)
+  if (value === 0) {
+    return 0;
+  }
+  if (value == 1) {
+    return 1;
+  }
+  return fib(value - 2) + fib(value - 1);
+
+}
+
+// console.log("Fib=", fib(3)) // 13
+
+// convert with switch
+
 // 3. Closure
 
+function parentFun(param1, param2) {
+  let a = 1;
+  return function innerFun() {
+    console.log(a)
+    console.log(param2)
 
+  }
+}
+
+const innerFun1 = parentFun(10, "name")
+// => Ce se intampla daca innerFun foloseste param2 si a din parentFun
+innerFun1()
+
+
+// function clickBtn(params) {
+
+// }
+// const btn = document.createElement('button')
+// btn.addEventListener('click', clickBtn)
