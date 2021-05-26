@@ -12,7 +12,7 @@ Pasi de implementare:
 
 ## Obligatoriu
 
-0. Sa avem o functie play care da start jocului. Un button pe UI de start. Daca nu dam start, nu putem incepe sa jucam
+0. Sa avem o functie play care da start jocului, un button pe UI de start. Daca nu dam start, nu putem incepe sa jucam
 1. Sa pot juca jocul din pagina web, vom da posibilitatea utilizatorului sa aleaga o varianta dintre rock,paper, scissors
 
 ## Optional
