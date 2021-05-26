@@ -14,6 +14,7 @@ Trebuie sa avem alegerile si sa afisam cine castiga
 
 0. Sa avem o functie play care da start jocului, un button pe UI de start. Daca nu dam start, nu putem incepe sa jucam
 1. Sa pot juca jocul din pagina web, vom da posibilitatea utilizatorului sa aleaga o varianta dintre rock,paper, scissors
+2. Afisati in UI cine castiga ( nu in consola cum sa facut la workshop)
 
 ## Optional
 
