@@ -64,7 +64,7 @@ function fn4() {
   }
 
   console.log(index)
-  // se supra scrie valoare 9999
+  // se supra scrie valoare 999 cu valoare 10
   // 10, putem accesa index infara forului
 }
 
