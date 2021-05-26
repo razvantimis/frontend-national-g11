@@ -164,3 +164,19 @@ function fn12() {
 
 fn12();
 console.log(index)
+
+// Scopul
+
+var test = 9;
+function fn15() {
+  var test = 10;
+
+  function fn16() {
+    var test = 12;
+    var test = 13; // test cu 13 suprascrie test cu 12
+  }
+  fn16()
+  console.log(test)
+}
+fn15();
+console.log(test)
