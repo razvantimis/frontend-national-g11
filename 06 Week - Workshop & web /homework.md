@@ -1,9 +1,9 @@
-## Rock, paper, scissors
+# Rock, paper, scissors
 
 Avem doi jucatori si fiecare face o alegere din cele trei variante ( Rock, paper, scissors )
 Trebuie sa avem alegerile si sa afisam cine castiga
 
-Pasi de implementare:
+## Pasi de implementare:
 
 1. Un jucator va fi PC iar celalalt noi (User)
 2. PC: Sa facem o lista cu variantele din care PC alege random
