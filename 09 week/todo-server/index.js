@@ -21,13 +21,13 @@ router.get('/todos/:id', async ctx => {
 });
 
 router.post('/todos', async ctx => {
-  const post = await db.get('todos')
+  const todo = await db.get('todos')
     .push(ctx.request.body)
     .last()
     .assign({ id: Date.now().toString(), checked: false })
     .write()
 
-  ctx.body = post;
+  ctx.body = todo;
 });
 
 router.delete('/todos/:id', async ctx => {
@@ -38,11 +38,11 @@ router.delete('/todos/:id', async ctx => {
 })
 
 router.put('/todos/:id', async ctx => {
-  const post = await db.get('todos')
+  const todo = await db.get('todos')
     .find({ id: ctx.params.id })
     .assign({ ...ctx.request.body })
     .write()
-  ctx.body = post;
+  ctx.body = todo;
 })
 
 app

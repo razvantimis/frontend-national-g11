@@ -4,7 +4,7 @@ Se foloseste servarul de la curs - 09 week/todo-server
  
 Un Todo item are trei proprietati: 
  id - string
- item - string (aici vine textul , gen faceti temele)
+ text - string (aici vine textul , gen faceti temele)
  checked - boolean
 
 Cerinte:

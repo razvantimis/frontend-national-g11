@@ -3,16 +3,16 @@
     {
       "id": "3",
       "checked": true,
-      "item": "Fac curat"
+      "text": "Fac curat"
     },
     {
       "checked": true,
-      "item": "Fac mancare",
+      "text": "Fac mancare",
       "id": "1586591053377"
     },
     {
       "checked": true,
-      "item": "Fac cumparaturi",
+      "text": "Fac cumparaturi",
       "id": "1586591058449"
     }
   ]
