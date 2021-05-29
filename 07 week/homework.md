@@ -1,4 +1,4 @@
-## Digital clock
+## Digital timer
 
 Acesta tema va porni de la ce sa facut la workshop
 
