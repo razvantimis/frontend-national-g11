@@ -1,4 +1,4 @@
-## Practice more API calls 
+## ( Optional ) Practice more API calls 
 
 In order to practice more API calls, implement the following (as many as you want, in any order):
 
@@ -9,7 +9,6 @@ In order to practice more API calls, implement the following (as many as you wan
     - add a dropdown on the page where you can select which animal you want to see (options: dog, cat, fox)
     - add a "get photo" button, when clicking on the button, call the appropriate API (from the list above) to get the image of the selected animal
 
-## Optional 
 For those of you who like art, Rijksmuseum API is perfect for use: http://rijksmuseum.github.io/
 you need to create an account in order to get an API key (a string that you need to enter in all the requests to that API)
 
