@@ -14,3 +14,5 @@ Cerinte:
 2. User poate sa poata bifa un todo, ( se face update la checked din false in true)
 
 Asemanator cu Blog workshop
+
+Un exemplu de implementare, https://codepen.io/wilstaley/pen/KKwypJW , asemanator cu ce este aici doar mai avem o bifa, iar daca dam click pe text se pune checked
