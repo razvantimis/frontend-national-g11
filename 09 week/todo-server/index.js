@@ -24,7 +24,7 @@ router.post('/todos', async ctx => {
   const post = await db.get('todos')
     .push(ctx.request.body)
     .last()
-    .assign({ id: Date.now().toString() })
+    .assign({ id: Date.now().toString(), checked: false })
     .write()
 
   ctx.body = post;
