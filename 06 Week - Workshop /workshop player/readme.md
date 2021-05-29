@@ -5,10 +5,10 @@
 3.  Un player nu poate iesi inafara gameContainer ( de la punctul 1)
 
 
-## Homework
+## Homework Optional, pentru fiecare cerinta se primeste 1 un de activitate
 
-1. (Obligatoriu) Refacerea jocului de la workshop 
-2. (Obligatoriu) Un player nu poate iesi inafara gameContainer ( de la punctul 1)
-2. (Optional) Implementarea urmatoarele cerinte:
+1. Refacerea jocului de la workshop
+2. Un player nu poate iesi inafara gameContainer ( de la punctul 1)
+2. Implementarea urmatoarele cerinte:
     1. Adaugati abstacole, puneti cateva div-uri ( dimensiuni fixe cu anumita culoare) in gameContainer, pot fi random puse in container. ( +1 activitate )
     2. Player daca intalneste un obstacol, nu poate trece de el ( +1  activitate)
