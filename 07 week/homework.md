@@ -1,32 +1,20 @@
-## Practice more API calls 
+## Digital clock
 
-In order to practice more API calls, implement the following (as many as you want, in any order):
+Acesta tema va porni de la ce sa facut la workshop
 
-1. Implement the functionality to retrieve a:
-    - random dog photo: https://random.dog/woof.json
-    - random cat photo: https://aws.random.cat/meow
-    - random fox photo: https://randomfox.ca/floof/
-    - add a dropdown on the page where you can select which animal you want to see (options: dog, cat, fox)
-    - add a "get photo" button, when clicking on the button, call the appropriate API (from the list above) to get the image of the selected animal
+Tasks:
 
-## Optional 
-For those of you who like art, Rijksmuseum API is perfect for use: http://rijksmuseum.github.io/
-you need to create an account in order to get an API key (a string that you need to enter in all the requests to that API)
+1. Adaugati un button plus functionalitate pentru start timer
+2. Adaugati un button plus functionalitate pentru stop timer
+3. Adaugati un button plus functionalitate pentru reset timer
+4. Adaugati un button plus functionalitate pentru save timer
 
-Example request: 
-https://www.rijksmuseum.nl/api/nl/collection/SK-C-5?key=[API_KEY]&format=json
-replace [API_KEY] with the string that you get after creating the account and requesting it
-more info here: https://www.rijksmuseum.nl/en/api
+Tips:
+General: Se fac in html 4 buttoane cu id-uri unice si se inregistreaza in fisier de js eventul de click
 
-Display Chuck Norris jokes on the page: http://www.icndb.com/api/ 
+Task 1: functionalitate de la setInterval trebuie pusa intr-o functie si apela doar cand dam click pe buttonul start
+Task 2: Gasiti un exemplu aici https://www.w3schools.com/jsref/met_win_clearinterval.asp, trebuie sa apelati clearInterval cu valoare returnata de setInterval
+Task 3: Trebuie sa faceti un restart, adica va incepe de la 00:00:00. Puteti sa va folositi de Task2, pentru a opri timerul si dupa sa resetati valorile din browser iar la final ii dati start
+Task 4: Se va creea un nou element in pagina cu valoare de la momentul apasari butonului de save
 
-Display random or programming jokes on the page: https://github.com/15Dkatz/official_joke_api
 
-For Rick and Morty fans, you can use this API to display and filter characters and episodes: https://rickandmortyapi.com/documentation#rest
-
-For Game of Thrones fans, you can use this API to display info about Game of Thrones characters and books: https://anapioficeandfire.com/Documentation
-
-Similarly, for Star Wars fans: https://swapi.co/
-You can also use other public APIs from this list: https://github.com/public-apis/public-apis 
-
-For simplicity, use the APIs that need no Authentication or use an API Key (but not OAuth, that's a bit too complex for now). Also, they should work on HTTPS (Yes) and they should not have CORS no (CORS is a setting that enables web apps to make calls to an API on a different domain - this is something that is not allowed by default)

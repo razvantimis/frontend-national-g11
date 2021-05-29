@@ -1,10 +1,8 @@
-# AJAX
+## Async programing
 
-1. What is API?
-2. What is AJAX?
+0. Callback functions
+1. setTimeout & setInterval
 3. Sync vs Async
-3. Fetch 
-4. JSON.stringly & JSON.parse
-5. Workshop blog
-
-
+6. Promise
+3. Event Loop - https://www.youtube.com/watch?v=8aGhZQkoFbQ
+4. Workshop Digital clock
