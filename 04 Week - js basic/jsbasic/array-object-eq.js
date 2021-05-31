@@ -26,6 +26,6 @@ var obj2 = {
 console.log(obj1 == obj2) // false
 
 // Shallow Comparison
-// comparatie intre adrese in cazul object si array
+// comparatie intre adrese de memorie in cazul object si array
 
 
