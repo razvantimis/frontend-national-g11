@@ -21,6 +21,7 @@ suma();
 // suma a doua numere
 // conteaza ordinea
 function sum(number1, number2, number3) {
+  // if(typeof number1 === 'number')
   console.log(number1 + number2)
   console.log(number3)
 }

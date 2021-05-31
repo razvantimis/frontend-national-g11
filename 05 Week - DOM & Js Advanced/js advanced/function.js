@@ -47,7 +47,6 @@ let myParam2 = [1, 2, 3, 4, 5];
 fn2(myParam2)
 // console.log(myParam2)
 
-
 function fn3(x) {
   x.name = "test";
 }
