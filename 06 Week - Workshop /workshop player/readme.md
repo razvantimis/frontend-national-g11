@@ -2,7 +2,7 @@
 0. Recap
 1. Shallow Comparison ===, ==
 
-## The Player
+## The Player https://codesandbox.io/s/the-player-17ueu?file=/src/index.js:0-1495
 
 1.  Definiti un container de dimensiuni fixe ( de exemplu height: 400, width: 400) unde puteti playerul - il numim gameContainer
 2.  Player sa poate misca in toate directile
