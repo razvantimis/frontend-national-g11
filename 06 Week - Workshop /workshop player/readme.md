@@ -1,3 +1,7 @@
+## Tech
+0. Recap
+1. Shallow Comparison ===, ==
+
 ## The Player
 
 1.  Definiti un container de dimensiuni fixe ( de exemplu height: 400, width: 400) unde puteti playerul - il numim gameContainer
