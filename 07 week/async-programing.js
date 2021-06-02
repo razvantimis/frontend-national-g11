@@ -46,7 +46,8 @@ function runAsync() {
 function runAsync2() {
   console.log('run 2 after 1s')
 }
-
+// Executa codul dupa 1000 * 1 = 1 secunda, ( 1000 sunt milisecunde)
+// Doar o  executa callback-ul
 setTimeout(runAsync, 1000 * 1)
 setTimeout(runAsync2, 1000 * 1)
 
@@ -57,6 +58,8 @@ function loopRun() {
   console.log('------- setInterval')
 }
 
+// Exercuta codul la fiecare 1000 milisecunde = 1 sec
+// Se repeta pana facem stop cu clearInterval
 const intervalId = setInterval(loopRun, 1000);
 
 setTimeout(function () {
