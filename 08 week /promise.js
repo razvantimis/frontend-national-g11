@@ -23,3 +23,11 @@ function promiseEx() {
     })
   console.log('cod normal')
 }
+// Ce printeaza codul din functia promiseEx
+// promise1:merge syncron
+// cod normal
+// promise1: then 1, result= done
+// promise1: then 2, result= 123
+// promise1: then 3, result= undefined
+
+
