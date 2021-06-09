@@ -1,5 +1,7 @@
 # AJAX - Server request
 
+## Recap - callback, async
+
 0. Promise - Callback hell
 1. What is API?
 2. What is AJAX?
