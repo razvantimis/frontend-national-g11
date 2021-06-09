@@ -17,18 +17,22 @@ var secondsElement = document.getElementById("seconds");
 var minutesCount = 59;
 var secondsCount = 55;
 var hoursCount = 0;
-function updateSeconds() {
-  secondsCount = secondsCount + 1;
 
+function updateMinutes() {
   if (secondsCount === 60) {
     secondsCount = 0;
     minutesCount++;
   }
+}
+
+function updateHours() {
   if (minutesCount === 60) {
     minutesCount = 0;
     hoursCount++;
   }
+}
 
+function updateDOMTimer() {
   if (secondsCount < 10) {
     secondsElement.innerText = "0" + secondsCount;
   } else {
@@ -39,13 +43,22 @@ function updateSeconds() {
   hoursElement.innerText = hoursCount < 10 ? "0" + hoursCount : hoursCount;
 }
 
+function updateTime() {
+  secondsCount = secondsCount + 1;
+
+  updateMinutes();
+  updateHours();
+
+  updateDOMTimer();
+}
+
 // 1. Adaugati un button plus functionalitate pentru start timer
 let btnCount = 0;
 let intervalId;
 const btnStart = document.getElementById('start');
 btnStart.addEventListener('click', function () {
   if (btnCount < 1) {
-    intervalId = setInterval(updateSeconds, 1000);
+    intervalId = setInterval(updateTime, 1000);
   }
   btnCount++;
 })
