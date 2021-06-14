@@ -39,18 +39,22 @@ function displayPosts() {
 
 }
 
-// function createPost() {
-//   const post = { title: 'test', text: '123' }
+function createPost() {
+  const post = { title: 'razvan12312312321312', text: 'razvan12312312321312' }
 
-//   fetch('http://localhost:3000/posts', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(post)
-//   })
+  fetch('http://localhost:3000/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(post)
+  })
 
-// }
+}
+
+document.getElementById('add').addEventListener('click', function () {
+  createPost();
+})
 
 
 displayPosts();
