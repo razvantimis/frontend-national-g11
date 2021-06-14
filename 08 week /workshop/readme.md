@@ -27,6 +27,6 @@ Sa avem paginile html
 ### 3. Editare de post ( nu avem lista de posturi )
 
 1. Creaza edit-post.html
-2. Facem request la server si cerem postul dupa id (http://localhost:3000/posts/:id)
-3. Facem inputurile pentru title si text + button de update
+2. Facem inputurile pentru title si text + button de update
+3. Facem request la server si cerem postul dupa id (http://localhost:3000/posts/:id) + pre completam inputurile
 4. Facem request care face update la post
