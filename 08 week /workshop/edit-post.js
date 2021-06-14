@@ -1,3 +1,6 @@
+// 1. sa afisam id din query params
+const postId = window.location.search.substring(4);
+
 const btnUpdate = document.getElementById('btn-update');
 
 const titleInput = document.getElementById('title');
@@ -9,5 +12,10 @@ btnUpdate.addEventListener('click', function () {
     text: textInput.value,
   }
   console.log(post)
-
 })
+
+
+function getPost() {
+
+}
+
