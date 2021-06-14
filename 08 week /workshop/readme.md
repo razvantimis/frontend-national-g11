@@ -8,18 +8,18 @@ Sa avem paginile html
 
 1. Afisare posturi pe home ( prin request la blog-server )
 2. Editare de post
-3. Sterge de post
-4. Adaugare de post
-5. Afisarea unui post
+3. Afisarea unui post
+4. Sterge de post
+5. Adaugare de post
 
 ## Impartim in task-uri mici
 
 ### 1. Afisare posturi pe home
 
-1. Creaza home.html
-2. Facem un container pentru afisarea posturilor in home.html
-3. Facem requestul la server dupa post-uri
-4. Creeam reprezentarea postului in html si il adaugam in container
+1. [done] Creaza home.html
+2. [done] Facem un container pentru afisarea posturilor in home.html
+3. [done] Facem requestul la server dupa post-uri (in consola afisam posturile)
+4. [Afisare in html] Creeam reprezentarea postului in html si il adaugam in container
 5. Afisam doar un summary de la descriere
 6. Add button de edit care duce spre edit-post.html
 7. Add styling
