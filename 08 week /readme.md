@@ -8,3 +8,8 @@
 3. What is AJAX?
 4. Fetch
 5. Workshop blog
+
+## Workshop
+
+1. Recap
+2. Workshop blog
