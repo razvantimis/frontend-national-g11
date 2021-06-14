@@ -33,7 +33,7 @@ function createPostHTML(title, text) {
   article.appendChild(h1)
   article.appendChild(p)
 
-  p.innerText = text;
+  p.innerText = text.length > 150 ? text.substring(0, 150) + "..." : text;
   h1.innerText = title;
 
   return article;

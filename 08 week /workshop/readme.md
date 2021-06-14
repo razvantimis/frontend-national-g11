@@ -19,8 +19,8 @@ Sa avem paginile html
 1. [done] Creaza home.html
 2. [done] Facem un container pentru afisarea posturilor in home.html
 3. [done] Facem requestul la server dupa post-uri (in consola afisam posturile)
-4. [Afisare in html] Creeam reprezentarea postului in html si il adaugam in container
-5. Afisam doar un summary de la descriere
+4. [done] [Afisare in html] Creeam reprezentarea postului in html si il adaugam in container
+5. [done] Afisam doar un summary de la descriere
 6. Add button de edit care duce spre edit-post.html
 7. Add styling
 
