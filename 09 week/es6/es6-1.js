@@ -82,8 +82,50 @@ async function displayPosts() {
 displayPosts();
 
 
+// 4. Array - map, forEach, filter, reducer
 
-// 4. Array - map, reducer, forEach,
+const myArray = [1, 2, 3, 4, 5, 6, 7];
+
+// -------  .map -----------
+// .map = transforma fiecare element in altceva ( noi definim asta )
+// Nu modifica array-ul initial deci myArray ramane la fel
+// .map returneaza un nou array cu elemente modificate conform callback
+const newMapArray = myArray.map((value, index) => {
+  if (index % 2 == 0) {
+    return value + 10
+  }
+  return value;
+}) // [11, 12, 13, ... ]
+console.log(newMapArray)
+
+// -------  .forEach -----------
+// la fel ca un for normal
+const myArray = [1, 2, 3, 4, 5, 6, 7];
+myArray.forEach((element, index) => {
+
+})
+
+// -------  .filter -----------
+// Ca si .map doar ca exclude conform conditie
+const myArray = [1, 2, 3, 4, 5, 6, 7];
+const parElements = myArray.filter((value) => {
+  return value % 2 == 0 // trebuie sa returnam true/false
+})
+// -------  .reducer -----------
+// Reducer are ca scop sa reduca un array la o singura valoare
+const myArray = [1, 2, 3, 4, 5, 6, 7];
+const value = myArray.reduce((acc, currentValue) => {
+
+  return acc + currentValue;
+}, 0)
+
+// ----- .splice ------
+// Stergem ceva din array
+// Afecteaza array-ul nostru
+const myArray = [1, 2, 3, 4, 5, 6, 7];
+myArray.splice(2, 1)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
 // 6. Template literals
 // 7. Destructuring 
 //     1. Destructuring Object 
