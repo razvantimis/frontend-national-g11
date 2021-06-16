@@ -33,7 +33,8 @@
 
 // }
 
-// getPosts().then((posts) => {
+// getPosts()
+// .then((posts) => {
 //   console.log("getPosts() =", posts)
 // });
 
