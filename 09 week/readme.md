@@ -10,7 +10,7 @@
    2. Destructuring Arrays
    3. Destructuring Nested Object
    4. Destructuring Rename
-7. Spread operator / Function Rest parameters
+7. Spread operator / Function Rest parameters / Copy obj
 8. Enhanced Object Literals
 9. ES Module ( import export )
 
