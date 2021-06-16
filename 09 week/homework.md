@@ -1,17 +1,18 @@
 ## TO DO App
 
 Se foloseste servarul de la curs - 09 week/todo-server
- 
-Un Todo item are trei proprietati: 
- id - string
- text - string (aici vine textul , gen faceti temele)
- checked - boolean
+
+Un Todo item are trei proprietati:
+id - string
+text - string (aici vine textul , gen faceti temele)
+checked - boolean
 
 Cerinte:
-1. Afisarea listei de TODO
-2. User poate sa adauge un todo item
-2. User poate sa sterga un todo item
-2. User poate sa poata bifa un todo, ( se face update la checked din false in true)
+
+1. Afisarea listei de TODO ( GET )
+2. User poate sa adauge un todo item ( POST )
+3. User poate sa sterga un todo item ( DELETE )
+4. User poate sa poata bifa un todo, ( se face update la checked din false in true) ( PUT )
 
 Asemanator cu Blog workshop
 
