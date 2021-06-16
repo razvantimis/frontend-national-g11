@@ -160,6 +160,3 @@ const [second] = myArray; // secound = 1
 
 const [_, __, element] = myArray;
 // last element = myArray[myArray.length-1]
-
-// 8. Spread operator / Function Rest parameters
-// 9. Enhanced Object Literals
