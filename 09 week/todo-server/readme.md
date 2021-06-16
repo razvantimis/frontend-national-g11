@@ -1,4 +1,4 @@
-# Server Blog
+# Server Todo
 
 Pentru instalare va rog sa parcurgeti urmatori pasi:
 
