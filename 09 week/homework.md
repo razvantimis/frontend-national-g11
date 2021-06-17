@@ -1,6 +1,10 @@
 ## TO DO App
 
 Se foloseste servarul de la curs - 09 week/todo-server
+1. Se aduce lista de todos de pe http://localhost:3000/todos GET
+2. Pentru a crea se face POST pe http://localhost:3000/todos
+3. Pentru update se face PUT pe http://localhost:3000/todos
+4. Pentru stergere se face DELETE pe http://localhost:3000/todos
 
 Un Todo item are trei proprietati:
 id - string
