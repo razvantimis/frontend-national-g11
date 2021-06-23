@@ -102,7 +102,7 @@ console.log(newMapArray)
 // la fel ca un for normal
 const myArray = [1, 2, 3, 4, 5, 6, 7];
 myArray.forEach((element, index) => {
-
+  // logica din for
 })
 
 // -------  .filter -----------

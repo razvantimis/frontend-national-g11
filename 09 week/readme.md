@@ -5,7 +5,7 @@
 1. let,const
 2. Arrow function
 3. Promise async/await
-4. Array - map, reducer, forEach,
+4. Array - map, reducer, forEach, filter
 5. Template literals
 
 ## ES6-2
