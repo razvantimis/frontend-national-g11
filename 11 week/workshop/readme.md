@@ -1,7 +1,8 @@
-## The Player - OOP Style
+## The Player with Monster - OOP Style
 
-1.  Definiti un container de dimensiuni fixe ( de exemplu height: 400, width: 400) unde puteti playerul - il numim gameContainer
-2.  Player sa poate misca in toate directile
+1.  Definiti un container de dimensiuni fixe unde puteti playerul - il numim gameContainer
+2.  Player sa poate misca in toate directile ( folosim arrow up/down etc)
 3.  Un player nu poate iesi inafara gameContainer ( de la punctul 1)
-4.  Adaugati abstacole, puneti cateva div-uri ( dimensiuni fixe cu anumita culoare) in gameContainer, pot fi random puse in container.
-5.  Player daca intalneste un obstacol, nu poate trece de el
+4.  Adaugati monstrii,pusi random in container. Acesti vor fi de mai multe tipuri
+5.  Monstru se misca prin container ( cauta playerul )
+6.  Player daca intalneste un monstru va va omorat
