@@ -11,7 +11,11 @@ btnUpdate.addEventListener('click', function () {
     title: titleInput.value,
     text: textInput.value,
   }
-  console.log(post)
+  updatePostServer(postId, post.title, post.text)
+    .then(post => {
+      window.location.href = "./home.html"
+    })
+
 })
 
 async function getPostById(id) {
@@ -35,11 +39,22 @@ async function previewPost() {
 previewPost()
 
 
-async function updatePostServer() {
-
+async function updatePostServer(id, title, text) {
+  const response = await fetch(`http://localhost:3000/posts/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      title,
+      text
+    })
+  })
+  return response.json();
 }
-// id, title, text, 
-updatePostServer(3, "test title", "ab text")
+// id, title, text,
+// updatePostServer(3, "bbbbbtest title", "ab text")
+//   .then(post => console.log(post))
 
 
 
