@@ -48,33 +48,6 @@ async function previewPost() {
 previewPost()
 
 
-async function updatePostServer(id, title, text) {
-  const response = await fetch(`http://localhost:3000/posts/${id}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      title,
-      text
-    })
-  })
-  return response.json();
-}
-// id, title, text,
-// updatePostServer(3, "bbbbbtest title", "ab text")
-//   .then(post => console.log(post))
-
-
-async function deletePostServer(id) {
-  const response = await fetch(`http://localhost:3000/posts/${id}`, {
-    method: 'DELETE'
-  });
-  return response.json();
-}
-
-// deletePostServer(1623684276744).then(post => console.log(post))
-
 
 
 

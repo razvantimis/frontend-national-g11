@@ -1,13 +1,3 @@
-// Facem request la server dupa posturile
-async function getPosts() {
-  try {
-    const response = await fetch('http://localhost:3000/posts');
-    return response.json();
-  } catch (err) {
-    console.log(err)
-  }
-}
-
 // Ea se ocupa doar cu afisarea in html a unei liste de posturi
 const displayPostsInHTML = (posts) => { // merge si cu function sa dam la then
   // sa afisam posturile in container

@@ -1,12 +1,3 @@
-// Facem request la server dupa posturile
-async function getPosts() {
-  try {
-    const response = await fetch('http://localhost:3000/posts');
-    return response.json();
-  } catch (err) {
-    console.log(err)
-  }
-}
 
 const displayPostsInHTML = (posts) => {
   const containerListPost = document.getElementById('list-post');
