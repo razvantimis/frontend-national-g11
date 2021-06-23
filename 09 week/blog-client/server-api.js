@@ -18,6 +18,7 @@ async function deletePostServer(id) {
   });
   return response.json();
 }
+
 async function updatePostServer(id, title, text) {
   const response = await fetch(`http://localhost:3000/posts/${id}`, {
     method: 'PUT',
@@ -41,6 +42,18 @@ async function getPosts() {
     console.log(err)
   }
 }
+
+async function getPostById(id) {
+  try {
+    const response = await fetch(`http://localhost:3000/posts/${id}`);
+    return response.json();
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+// getPostById(3).then(post => console.log(post))
+
 
 // id, title, text,
 // updatePostServer(3, "bbbbbtest title", "ab text")

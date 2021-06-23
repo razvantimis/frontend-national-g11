@@ -27,17 +27,6 @@ btnUpdate.addEventListener('click', function () {
 
 })
 
-async function getPostById(id) {
-  try {
-    const response = await fetch(`http://localhost:3000/posts/${id}`);
-    return response.json();
-  } catch (err) {
-    console.log(err)
-  }
-}
-
-// getPostById(3).then(post => console.log(post))
-
 async function previewPost() {
   const post = await getPostById(postId);
   console.log(post)
