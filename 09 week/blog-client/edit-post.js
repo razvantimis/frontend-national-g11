@@ -14,8 +14,33 @@ btnUpdate.addEventListener('click', function () {
   console.log(post)
 })
 
+async function getPostById(id) {
+  try {
+    const response = await fetch(`http://localhost:3000/posts/${id}`);
+    return response.json();
+  } catch (err) {
+    console.log(err)
+  }
+}
 
-function getPost() {
+// getPostById(3).then(post => console.log(post))
+
+async function previewPost() {
+  const post = await getPostById(postId);
+  console.log(post)
+  titleInput.value = post.title;
+  textInput.value = post.text;
 
 }
+previewPost()
+
+
+async function updatePostServer() {
+
+}
+// id, title, text, 
+updatePostServer(3, "test title", "ab text")
+
+
+
 
