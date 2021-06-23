@@ -10,9 +10,8 @@ async function getPosts() {
 
 const displayPostsInHTML = (posts) => {
   const containerListPost = document.getElementById('list-post');
-  const postsHTML = posts.map((post) => createPostHTML(post.id, post.title, post.text))
+  const postsHTML = posts.map(({ id, title, text }) => createPostHTML(id, title, text))
   containerListPost.append(...postsHTML)
-
 }
 
 async function showPosts() {
@@ -23,7 +22,6 @@ showPosts();
 
 // Creaza html pentru un singur post
 function createPostHTML(id, title, text) {
-
   const article = document.createElement('article');
 
   // template string

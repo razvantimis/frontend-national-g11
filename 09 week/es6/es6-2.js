@@ -55,7 +55,16 @@ const user = {
   // x: 12,
 }
 const { xname: myName, x = 10 } = user;
+// Destructuring function
 
+function show({ firstName }) {
+  console.log(firstName)
+}
+
+show({
+  firstName: 'A',
+  lastName: 'B'
+})
 
 // user2?.name 
 // egale
