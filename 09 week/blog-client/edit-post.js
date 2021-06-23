@@ -2,9 +2,18 @@
 const postId = window.location.search.substring(4);
 
 const btnUpdate = document.getElementById('btn-update');
+const btnDetele = document.getElementById('btn-delete');
 
 const titleInput = document.getElementById('title');
 const textInput = document.getElementById('text');
+
+
+btnDetele.addEventListener('click', function () {
+  deletePostServer(postId)
+    .then(post => {
+      window.location.href = "./home.html"
+    })
+})
 
 btnUpdate.addEventListener('click', function () {
   const post = {
@@ -55,6 +64,16 @@ async function updatePostServer(id, title, text) {
 // id, title, text,
 // updatePostServer(3, "bbbbbtest title", "ab text")
 //   .then(post => console.log(post))
+
+
+async function deletePostServer(id) {
+  const response = await fetch(`http://localhost:3000/posts/${id}`, {
+    method: 'DELETE'
+  });
+  return response.json();
+}
+
+// deletePostServer(1623684276744).then(post => console.log(post))
 
 
 
