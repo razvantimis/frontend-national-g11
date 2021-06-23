@@ -1,4 +1,4 @@
-# OOP 2
+# OOP
 
 1. Recap object & Prototype
 2. Encapsulation

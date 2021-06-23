@@ -1,4 +1,4 @@
-# OOP
+# JS Objects and Classes
 
 0. Objects - Why OOP?
 1. Factory function
