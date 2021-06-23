@@ -7,4 +7,4 @@
 5. Polymorphism
 6. Prototype chain
 
-# Workshop
+# Workshop - The Player

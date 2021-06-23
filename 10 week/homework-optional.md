@@ -1,4 +1,4 @@
-## (Optional) Homework Game HangMan
+## (Optional) Homework HangMan
 
 ### Tasks:
 
