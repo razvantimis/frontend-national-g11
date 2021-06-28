@@ -12,3 +12,4 @@ Avem 3 tipuri de spaceship: red,green,blue. Sa folositi imaginile din folderul a
 0. Va puteti insipra de la workshopul cu Car
 1. Clasa va accepta tipul de spaceship ca paramatru in constructor
 2. Tinem o lista cu toate obiectele Spaceship create
+3. A conduce nava se refera la a permite user-ului sa foloseaca arrow up/down/right/left ( cum era the player workshop )
