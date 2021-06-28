@@ -5,43 +5,89 @@
 
 // ES6
 
-class Car {
+// class Car {
+//   runEngine = false;
+//   // Este optional - deci putem avea clase si fara el
+//   // Daca vrem sa dam valori din exterior nu putem fara el, putem da diferite valori la atribute
+//   constructor(carColor, carEngine, carKm, model) {
+//     // in momentul in care creeam obiectul se apeleaza
+//     this.color = carColor;
+//     this.engine = carEngine;
+//     this.km = carKm;
+//     this.model = model;
+//     // this.runEngine = false;
+//     this.nrOfDoors = 4;
+//   }
 
-  runEngine = false;
+//   myMethod() {
 
-  // Este optional - deci putem avea clase si fara el
-  // Daca vrem sa dam valori din exterior nu putem fara el, putem da diferite valori la atribute
-  constructor(carColor, carEngine, carKm, model) {
-    // in momentul in care creeam obiectul se apeleaza
-    this.color = carColor;
-    this.engine = carEngine;
-    this.km = carKm;
-    this.model = model;
-    // this.runEngine = false;
-    this.nrOfDoors = 4;
-  }
+//   }
 
-  myMethod() {
+//   start() {
+//     console.log('start car')
+//   }
 
-  }
+//   stop() {
+//     console.log('stop car')
 
-  start() {
-    console.log('start car')
-  }
+//   }
+// }
+// // new => se creaza un nou obiect folosim clasa Car
+// const car0 = new Car(); // undefined
+// console.log(car0)
+// const car1 = new Car('red', 'electric', 200000, 'Dacia')
+// const car2 = new Car('blue', 'hybrid', 0, 'BMW')
+// const car3 = new Car('green', 'hybrid', 10000, 'B')
+// // car1.nrOfDoors = 10 // putem reasigna valori
+// console.log(car1)
+// console.log(car2)
+// console.log(car3)
+// car3.start();
 
-  stop() {
-    console.log('stop car')
+//  inaite de ES6
 
-  }
+function Car(color, engine, km, model) {
+  this.color = color;
+  this.engine = engine;
+  this.km = km;
+  this.model = model;
+  this.runEngine = false
 }
-// new => se creaza un nou obiect folosim clasa Car
-const car0 = new Car(); // undefined
-console.log(car0)
+// Functia Car are acelasi prototype ca si car1,car2,car3
+// prototype-ul este shared intre obiectele clasei dar si clasa in sine
+console.log(Car.prototype)
+
+Car.prototype.start = function () {
+  console.log('start car', this)
+}
+
+
+// Toate instantele(car1, car2, car3) au acelasi prototype
 const car1 = new Car('red', 'electric', 200000, 'Dacia')
 const car2 = new Car('blue', 'hybrid', 0, 'BMW')
 const car3 = new Car('green', 'hybrid', 10000, 'B')
-// car1.nrOfDoors = 10 // putem reasigna valori
+// console.log(car1)
+// car1.start()
+// car2.start()
 console.log(car1)
-console.log(car2)
-console.log(car3)
-car3.start();
+
+// car1.__proto__ === Car.prototype
+// Sa pus __ pentru a ne spune ca este privata, nu trebuie accesat
+console.log("car1.__proto__ === Car.prototype", car1.__proto__ === Car.prototype)
+console.log("car1.__proto__=", car1.__proto__)
+
+// Deci se poate modifica dar se recomanda sa nu
+// car1.__proto__.stop = function () {
+//   console.log('stop car')
+// }
+// Toate metodele de la array, string sunt pe prototype
+// Array.prototype
+// String.prototype
+// Object.prototype
+
+const array = [1, 2, 3]
+Array.prototype.forEach = function () {
+  console.log('bla bla')
+}
+
+array.forEach((el) => { console.log('test', el) })
