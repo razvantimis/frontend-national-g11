@@ -2,7 +2,8 @@
 
 0. Objects - Why OOP?
 1. Factory function
-2. Classes - es6 vs function
-3. Prototypes
+2. Classes - function vs es
+3. this
+4. Prototypes
 
 # Workshop - Car
