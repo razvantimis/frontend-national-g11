@@ -9,6 +9,7 @@ const textInput = document.getElementById('text');
 
 
 btnDetele.addEventListener('click', function () {
+  console.log(this) // btnDelete
   deletePostServer(postId)
     .then(post => {
       window.location.href = "./home.html"

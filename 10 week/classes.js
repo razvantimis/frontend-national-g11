@@ -5,33 +5,34 @@
 
 // ES6
 
-// class Car {
-//   runEngine = false;
-//   // Este optional - deci putem avea clase si fara el
-//   // Daca vrem sa dam valori din exterior nu putem fara el, putem da diferite valori la atribute
-//   constructor(carColor, carEngine, carKm, model) {
-//     // in momentul in care creeam obiectul se apeleaza
-//     this.color = carColor;
-//     this.engine = carEngine;
-//     this.km = carKm;
-//     this.model = model;
-//     // this.runEngine = false;
-//     this.nrOfDoors = 4;
-//   }
+class Car {
+  runEngine = false;
+  // Este optional - deci putem avea clase si fara el
+  // Daca vrem sa dam valori din exterior nu putem fara el, putem da diferite valori la atribute
+  constructor(carColor, carEngine, carKm, model) {
+    // in momentul in care creeam obiectul se apeleaza
+    this.color = carColor;
+    this.engine = carEngine;
+    this.km = carKm;
+    this.model = model;
+    // this.runEngine = false;
+    this.nrOfDoors = 4;
+  }
 
-//   myMethod() {
+  myMethod() {
 
-//   }
+  }
 
-//   start() {
-//     console.log('start car')
-//   }
+  start() {
+    console.log('start car')
+  }
 
-//   stop() {
-//     console.log('stop car')
+  stop() {
+    console.log('stop car')
 
-//   }
-// }
+  }
+}
+
 // // new => se creaza un nou obiect folosim clasa Car
 // const car0 = new Car(); // undefined
 // console.log(car0)
@@ -46,6 +47,7 @@
 
 //  inaite de ES6
 
+// Functie constructor
 function Car(color, engine, km, model) {
   this.color = color;
   this.engine = engine;
@@ -73,7 +75,7 @@ console.log(car1)
 
 // car1.__proto__ === Car.prototype
 // Sa pus __ pentru a ne spune ca este privata, nu trebuie accesat
-console.log("car1.__proto__ === Car.prototype", car1.__proto__ === Car.prototype)
+console.log("car1.__proto__ === Car.prototype", car1.__proto__ === Car.prototype) // true
 console.log("car1.__proto__=", car1.__proto__)
 
 // Deci se poate modifica dar se recomanda sa nu
@@ -86,6 +88,7 @@ console.log("car1.__proto__=", car1.__proto__)
 // Object.prototype
 
 const array = [1, 2, 3]
+// putem supra scrie metoda forEach
 Array.prototype.forEach = function () {
   console.log('bla bla')
 }

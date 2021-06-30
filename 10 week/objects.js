@@ -53,6 +53,9 @@ function createCar(carColor, carEngine, carKm, carModel) {
       // this este obiectul curent
       console.log(this)
       this.runEngine = true;
+    },
+    stop: function () {
+
     }
   }
 }
