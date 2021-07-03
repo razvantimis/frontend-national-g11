@@ -1,6 +1,7 @@
 # OOP
 
 1. Recap object & Prototype
+2. Static method & Hosting on Class??
 2. Encapsulation
 3. Inheritance
 4. Composition
