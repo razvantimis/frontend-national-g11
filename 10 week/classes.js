@@ -72,8 +72,8 @@ const car1 = new Car('red', 'electric', 200000, 'Dacia')
 const car2 = new Car('blue', 'hybrid', 0, 'BMW')
 const car3 = new Car('green', 'hybrid', 10000, 'B')
 // console.log(car1)
-// car1.start()
-// car2.start()
+// car1.start() => this va fi car1
+// car2.start() => this va fi car2
 console.log(car1)
 
 // car1.__proto__ === Car.prototype
