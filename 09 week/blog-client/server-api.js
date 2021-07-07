@@ -66,8 +66,9 @@ async function getPostById(id) {
 
 
 class ServerApi {
+  static URL = 'http://localhost:3000';
   static async addPost(title, text) {
-    const response = await fetch('http://localhost:3000/posts', {
+    const response = await fetch(`${ServerApi.URL}/posts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -80,9 +81,8 @@ class ServerApi {
     return response.json();
   }
 
-
   static async deletePost(id) {
-    const response = await fetch(`http://localhost:3000/posts/${id}`, {
+    const response = await fetch(`${ServerApi.URL}/posts/${id}`, {
       method: 'DELETE'
     });
     return response.json();
