@@ -4,7 +4,7 @@
 1. Factory function
 2. Classes - function vs es
 3. this
-4. Prototypes
+4. Prototype , {}
 
 # Workshop - Car
 

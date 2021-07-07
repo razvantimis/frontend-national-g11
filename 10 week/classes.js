@@ -26,6 +26,7 @@ class Car {
 
   start() {
     console.log('start car')
+    console.log(this)
   }
 
   stop() {
