@@ -63,3 +63,31 @@ async function getPostById(id) {
 
 
 // addPostServer('title1', 'text2').then(post => console.log(post))
+
+
+class ServerApi {
+  static async addPost(title, text) {
+    const response = await fetch('http://localhost:3000/posts', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        title,
+        text
+      })
+    })
+    return response.json();
+  }
+
+
+  static async deletePost(id) {
+    const response = await fetch(`http://localhost:3000/posts/${id}`, {
+      method: 'DELETE'
+    });
+    return response.json();
+  }
+}
+
+ServerApi.addPost()
+ServerApi.deletePost()

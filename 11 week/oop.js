@@ -175,6 +175,7 @@ class Fly extends Engine {
   start() {
     console.log("fly mode")
     this.flyMode = true;
+    // Car.display()
   }
 
   toString() {
@@ -198,3 +199,61 @@ const listOfEngine = [
 ]
 
 startAllEngine(listOfEngine);
+
+// 7. Static method/props
+
+class Fly extends Engine {
+
+}
+class Car extends Engine {
+  static LIMIT_SPEED = 10
+  constructor(color, engineType) {
+    super(engineType) // super este constructorul de la clasa Vechile
+    // Scopul apelari este sa avem prop de la Vechile
+    this.color = color;
+  }
+
+  // este o metoda static , la fel ca functia displayCar
+  // o functie utilitara care are legatura cu clasa Car
+  static display(car) {
+    // nu avem acces la This
+    // nu avem nevoie de un obiect al clasei Car ca sa apeleam metoda
+    console.log(car.color)
+    console.log(car.engineType)
+
+  }
+}
+
+// Functie normala infara clasei
+// function displayCar(car) {
+//   console.log(car.color)
+//   console.log(car.engineType)
+// }
+// function displayFly(fly) {
+//   console.log(fly.engineType)
+// }
+
+const car1 = new Car('red', 'electric')
+// displayCar(car1);
+Car.display(car1)
+console.log(Car.LIMIT_SPEED)
+
+// Object.values()
+// Math.random()
+
+
+// static inaite de ES6
+
+function Car(color) {
+  this.color = color;
+}
+
+Car.LIMIT_SPEED = 10;
+
+Car.display = function () {
+
+}
+
+
+
+
