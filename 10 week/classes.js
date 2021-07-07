@@ -64,7 +64,9 @@ Car.prototype.start = function () {
   console.log('start car', this)
 }
 
-
+// const array = new Array() <=> []
+// new String()
+// new Promise()
 // Toate instantele(car1, car2, car3) au acelasi prototype
 const car1 = new Car('red', 'electric', 200000, 'Dacia')
 const car2 = new Car('blue', 'hybrid', 0, 'BMW')
