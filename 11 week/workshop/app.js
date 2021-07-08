@@ -6,9 +6,81 @@
 // 1. Va crea div html si il va afisa pe ecran
 // 2. Mutam logica de miscare in clasa
 
-class Player {
-  static STEP = 40;
+class MoveHtmlElement {
+  constructor(step, htmlElement) {
+    this.step = step;
+    this.htmlElement = htmlElement;
+    this.htmlElement.style.position = "absolute";
+    this.htmlElement.style.top = "0px";
+    this.htmlElement.style.left = "0px";
 
+  }
+
+  // Logica de validare daca player iese din mapa
+  // Returneaza true daca este inca in mapa altfel false
+  static isInMap(top, left, step) {
+    if (
+      top >= 0 &&
+      top <= 400 - step &&
+      left >= 0 &&
+      left <= 400 - step
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  moveHtmlLogic(getNextTopAndNextLeft) {
+    const top = parseInt(this.htmlElement.style.top, 10);
+    const left = parseInt(this.htmlElement.style.left, 10);
+    const { nextTop, nextLeft } = getNextTopAndNextLeft(top, left)
+    if (MoveHtmlElement.isInMap(nextTop, nextLeft, this.step)) {
+      this.htmlElement.style.top = nextTop + "px";
+      this.htmlElement.style.left = nextLeft + "px";
+    }
+  }
+
+  moveUp() {
+    this.moveHtmlLogic((top, left) => {
+      const nextTop = top - this.step;
+      return {
+        nextTop,
+        nextLeft: left,
+      }
+    })
+  }
+  moveDown() {
+    this.moveHtmlLogic((top, left) => {
+      const nextTop = top + this.step;
+      return {
+        nextTop: nextTop,
+        nextLeft: left,
+      }
+    })
+  }
+
+  moveLeft() {
+    this.moveHtmlLogic((top, left) => {
+      const nextLeft = left - this.step
+      return {
+        nextLeft,
+        nextTop: top,
+      }
+    })
+  }
+
+  moveRight() {
+    this.moveHtmlLogic((top, left) => {
+      const nextLeft = left + this.step
+      return {
+        nextLeft,
+        nextTop: top,
+      }
+    });
+  }
+
+}
+class Player extends MoveHtmlElement {
   static create() {
     const playerDiv = document.createElement('div');
     playerDiv.classList.add('player');
@@ -19,77 +91,17 @@ class Player {
 
   }
 
-  // Logica de validare daca player iese din mapa
-  // Returneaza true daca este inca in mapa altfel false
-  static isInMap(top, left) {
-    if (
-      top >= 0 &&
-      top <= 400 - Player.STEP &&
-      left >= 0 &&
-      left <= 400 - Player.STEP
-    ) {
-      return true;
-    }
-    return false;
+  constructor() {
+    super(40, Player.create())
   }
 
   show(map) {
-    this.playerDiv = Player.create();
-    map.append(this.playerDiv)
+    map.append(this.htmlElement)
   }
-
-  moveHtmlLogic(getNextTopAndNextLeft) {
-    const top = parseInt(this.playerDiv.style.top, 10);
-    const left = parseInt(this.playerDiv.style.left, 10);
-    const { nextTop, nextLeft } = getNextTopAndNextLeft(top, left)
-    if (Player.isInMap(nextTop, nextLeft)) {
-      this.playerDiv.style.top = nextTop + "px";
-      this.playerDiv.style.left = nextLeft + "px";
-    }
-  }
-
-  moveUp() {
-    this.moveHtmlLogic((top, left) => {
-      const nextTop = top - Player.STEP;
-      return {
-        nextTop,
-        nextLeft: left,
-      }
-    })
-  }
-  moveDown() {
-    this.moveHtmlLogic((top, left) => {
-      const nextTop = top + Player.STEP;
-      return {
-        nextTop: nextTop,
-        nextLeft: left,
-      }
-    })
-  }
-
-  moveLeft() {
-    this.moveHtmlLogic((top, left) => {
-      const nextLeft = left - Player.STEP
-      return {
-        nextLeft,
-        nextTop: top,
-      }
-    })
-  }
-
-  moveRight() {
-    this.moveHtmlLogic((top, left) => {
-      const nextLeft = left + Player.STEP
-      return {
-        nextLeft,
-        nextTop: top,
-      }
-    });
-  }
-
 }
 
 class Monster {
+  static STEP = 10;
   constructor(type) {
     this.type = type;
   }
@@ -105,12 +117,31 @@ class Monster {
   }
 
   show(map, top, left) {
-    const monster = Monster.create(this.type, top, left);
-    map.append(monster)
+    this.monster = Monster.create(this.type, top, left);
+    map.append(this.monster)
+  }
+
+  moveHtmlLogic(getNextTopAndNextLeft) {
+    const top = parseInt(this.monster.style.top, 10);
+    const left = parseInt(this.monster.style.left, 10);
+    const { nextTop, nextLeft } = getNextTopAndNextLeft(top, left)
+    if (Player.isInMap(nextTop, nextLeft)) {
+      this.monster.style.top = nextTop + "px";
+      this.monster.style.left = nextLeft + "px";
+    }
+  }
+
+  moveUp() {
+    this.moveHtmlLogic((top, left) => {
+      const nextTop = top - Monster.STEP;
+      return {
+        nextTop,
+        nextLeft: left,
+      }
+    })
   }
 
 }
-
 
 class Game {
   // Returneaza top si left random 
@@ -142,18 +173,20 @@ class Game {
   constructor(map) {
     this.map = map;
     this.player = new Player();
+    this.monsterList = []
+    // const monsterTypes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    const monsterTypes = [1]
+    for (let index = 0; index < monsterTypes.length; index++) {
+      this.monsterList.push(new Monster(monsterTypes[index]))
+    }
   }
 
   // Afiseaza toate tiputile de monstrii in map
   showAllMonsters() {
-    const monsterTypes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-
-    for (let index = 0; index < monsterTypes.length; index++) {
-      const currentType = monsterTypes[index];
-      const monster = new Monster(currentType);
+    this.monsterList.forEach(monster => {
       const { top, left } = Game.getRandomTopAndLeft();
       monster.show(map, top, left);
-    }
+    })
   }
 
   registerMovementPlayer() {
@@ -179,16 +212,46 @@ class Game {
 
   }
 
+  monstersRun() {
+    setInterval(() => {
+      // Cum putem accesa mostrii
+      this.monsterList.forEach(monster => {
+        monster.moveUp();
+      });
+    }, 300)
+  }
+
   start() {
     this.player.show(this.map);
     this.showAllMonsters();
     this.registerMovementPlayer();
+    this.monstersRun()
   }
 }
-
+// Monstru se misca random prin container ( cauta playerul )
+// Solutia2: Se misca in continu dar isi schimba directia la un momandat
 const map = document.querySelector('.map');
 
 const game = new Game(map);
 game.start()
+
+
+function exempleCuMoveHtml() {
+  const myDiv = document.createElement('div');
+  myDiv.innerText = "sunt aici"
+  myDiv.style.backgroundColor = "red";
+  map.append(myDiv);
+
+  const moveDiv = new MoveHtmlElement(1, myDiv);
+  
+  moveDiv.moveDown()
+  moveDiv.moveDown()
+
+
+  setInterval(() => {
+    moveDiv.moveDown()
+  }, 50)
+}
+exempleCuMoveHtml()
 
 
