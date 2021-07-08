@@ -88,6 +88,5 @@ class ServerApi {
     return response.json();
   }
 }
-
 ServerApi.addPost()
 ServerApi.deletePost()

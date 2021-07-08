@@ -216,7 +216,7 @@ class Car extends Engine {
   // este o metoda static , la fel ca functia displayCar
   // o functie utilitara care are legatura cu clasa Car
   static display(car) {
-    // nu avem acces la This
+    // nu avem acces la this
     // nu avem nevoie de un obiect al clasei Car ca sa apeleam metoda
     console.log(car.color)
     console.log(car.engineType)
