@@ -8,33 +8,64 @@
 
 class Player {
   static STEP = 40;
-  show(map) {
-    this.playerDiv = document.createElement('div');
-    this.playerDiv.classList.add('player');
-    this.playerDiv.style.top = "200px";
-    this.playerDiv.style.left = "0px";
 
+  static createPlayer() {
+    const playerDiv = document.createElement('div');
+    playerDiv.classList.add('player');
+    playerDiv.style.top = "200px";
+    playerDiv.style.left = "0px";
+    // nu avem acces la this
+    return playerDiv;
+
+  }
+
+  static isPlayerInMap(top, left) {
+    if (
+      top >= 0 &&
+      top <= 400 - Player.STEP &&
+      left >= 0 &&
+      left <= 400 - Player.STEP
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  show(map) {
+    this.playerDiv = Player.createPlayer();
     map.append(this.playerDiv)
   }
 
   moveUp() {
     const top = parseInt(this.playerDiv.style.top, 10);
     const nextTop = top - Player.STEP;
-    if (isPlayerInMap(nextTop, 200, Player.STEP)) {
+    if (Player.isPlayerInMap(nextTop, 200)) {
       this.playerDiv.style.top = nextTop + "px";
     }
   }
   moveDown() {
-
+    const top = parseInt(this.playerDiv.style.top, 10);
+    const nextTop = top + Player.STEP;
+    if (Player.isPlayerInMap(nextTop, 200)) {
+      this.playerDiv.style.top = nextTop + "px";
+    }
   }
 
   moveLeft() {
-
+    const left = parseInt(this.playerDiv.style.left, 10);
+    const nextLeft = left - Player.STEP;
+    if (Player.isPlayerInMap(200, nextLeft)) {
+      this.playerDiv.style.left = nextLeft + "px";
+    }
   }
-
   moveRight() {
-
+    const left = parseInt(this.playerDiv.style.left, 10);
+    const nextLeft = left + Player.STEP;
+    if (Player.isPlayerInMap(200, nextLeft)) {
+      this.playerDiv.style.left = nextLeft + "px";
+    }
   }
+
 }
 
 const playerCls = new Player();
@@ -42,41 +73,23 @@ const playerCls = new Player();
 const map = document.querySelector('.map');
 playerCls.show(map)
 
-
-function isPlayerInMap(top, left, stepPx) {
-  if (top >= 0 && top <= 400 - stepPx && left >= 0 && left <= 400 - stepPx) {
-    return true;
-  }
-  return false;
-}
-
-var player = document.querySelector(".player");
-
 document.addEventListener("keydown", function (event) {
-  var top = parseInt(player.style.top, 10);
-  var left = parseInt(player.style.left, 10);
-  var stepPx = 40;
 
   // putem face o functie care sa returneze top,left modificat
   switch (event.key) {
     case "ArrowUp":
-      // top = top - stepPx;
       playerCls.moveUp();
       break;
     case "ArrowDown":
-      top = top + stepPx;
+      playerCls.moveDown()
       break;
     case "ArrowLeft":
-      left = left - stepPx;
+      playerCls.moveLeft()
       break;
     case "ArrowRight":
-      left = left + stepPx;
+      playerCls.moveRight()
       break;
     default:
   }
 
-  // if (isPlayerInMap(top, left, stepPx)) {
-  //   player.style.top = top + "px";
-  //   player.style.left = left + "px";
-  // }
 });
