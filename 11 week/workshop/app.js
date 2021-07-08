@@ -9,7 +9,7 @@
 class Player {
   static STEP = 40;
 
-  static createPlayer() {
+  static create() {
     const playerDiv = document.createElement('div');
     playerDiv.classList.add('player');
     playerDiv.style.top = "200px";
@@ -19,7 +19,9 @@ class Player {
 
   }
 
-  static isPlayerInMap(top, left) {
+  // Logica de validare daca player iese din mapa
+  // Returneaza true daca este inca in mapa altfel false
+  static isInMap(top, left) {
     if (
       top >= 0 &&
       top <= 400 - Player.STEP &&
@@ -32,64 +34,161 @@ class Player {
   }
 
   show(map) {
-    this.playerDiv = Player.createPlayer();
+    this.playerDiv = Player.create();
     map.append(this.playerDiv)
   }
 
-  moveUp() {
+  moveHtmlLogic(getNextTopAndNextLeft) {
     const top = parseInt(this.playerDiv.style.top, 10);
-    const nextTop = top - Player.STEP;
-    if (Player.isPlayerInMap(nextTop, 200)) {
+    const left = parseInt(this.playerDiv.style.left, 10);
+    const { nextTop, nextLeft } = getNextTopAndNextLeft(top, left)
+    if (Player.isInMap(nextTop, nextLeft)) {
       this.playerDiv.style.top = nextTop + "px";
-    }
-  }
-  moveDown() {
-    const top = parseInt(this.playerDiv.style.top, 10);
-    const nextTop = top + Player.STEP;
-    if (Player.isPlayerInMap(nextTop, 200)) {
-      this.playerDiv.style.top = nextTop + "px";
+      this.playerDiv.style.left = nextLeft + "px";
     }
   }
 
-  moveLeft() {
-    const left = parseInt(this.playerDiv.style.left, 10);
-    const nextLeft = left - Player.STEP;
-    if (Player.isPlayerInMap(200, nextLeft)) {
-      this.playerDiv.style.left = nextLeft + "px";
-    }
+  moveUp() {
+    this.moveHtmlLogic((top, left) => {
+      const nextTop = top - Player.STEP;
+      return {
+        nextTop,
+        nextLeft: left,
+      }
+    })
   }
+  moveDown() {
+    this.moveHtmlLogic((top, left) => {
+      const nextTop = top + Player.STEP;
+      return {
+        nextTop: nextTop,
+        nextLeft: left,
+      }
+    })
+  }
+
+  moveLeft() {
+    this.moveHtmlLogic((top, left) => {
+      const nextLeft = left - Player.STEP
+      return {
+        nextLeft,
+        nextTop: top,
+      }
+    })
+  }
+
   moveRight() {
-    const left = parseInt(this.playerDiv.style.left, 10);
-    const nextLeft = left + Player.STEP;
-    if (Player.isPlayerInMap(200, nextLeft)) {
-      this.playerDiv.style.left = nextLeft + "px";
-    }
+    this.moveHtmlLogic((top, left) => {
+      const nextLeft = left + Player.STEP
+      return {
+        nextLeft,
+        nextTop: top,
+      }
+    });
   }
 
 }
 
-const playerCls = new Player();
-// Locul unde va fi afisat
-const map = document.querySelector('.map');
-playerCls.show(map)
-
-document.addEventListener("keydown", function (event) {
-
-  // putem face o functie care sa returneze top,left modificat
-  switch (event.key) {
-    case "ArrowUp":
-      playerCls.moveUp();
-      break;
-    case "ArrowDown":
-      playerCls.moveDown()
-      break;
-    case "ArrowLeft":
-      playerCls.moveLeft()
-      break;
-    case "ArrowRight":
-      playerCls.moveRight()
-      break;
-    default:
+class Monster {
+  constructor(type) {
+    this.type = type;
   }
 
-});
+  static create(type, top, left) {
+    const imgMonster = document.createElement('img')
+    imgMonster.src = `./monster/monster${type}.svg`;
+    imgMonster.style.width = "40px";
+    imgMonster.style.position = "absolute";
+    imgMonster.style.top = top + "px";
+    imgMonster.style.left = left + "px";
+    return imgMonster;
+  }
+
+  show(map, top, left) {
+    const monster = Monster.create(this.type, top, left);
+    map.append(monster)
+  }
+
+}
+
+
+class Game {
+  // Returneaza top si left random 
+  static getRandomTopAndLeft() {
+    const mapPositions = Game.getMapPositions();
+    // console.log(mapPositions) // [0, 40, 80, 120, 160, 200, 240, 280, 320, 360]
+    // General random poziti in arrayul mapPositions
+    // mapPositions.length = 10 => randomIndexTop in [0..9]
+    const randomIndexTop = Math.floor(Math.random() * mapPositions.length)
+    const randomIndexLeft = Math.floor(Math.random() * mapPositions.length)
+    // Obtinem valoarile de pe pozitile random
+    const top = mapPositions[randomIndexTop];
+    const left = mapPositions[randomIndexLeft];
+
+    return {
+      top,
+      left
+    }
+  }
+  // Genereaza un array cu toate pozitile posibile in mapa noastra
+  static getMapPositions() {
+    let array = [];
+    for (let j = 0; j <= 360; j = j + 40) {
+      array.push(j);
+    }
+    return array;
+  }
+
+  constructor(map) {
+    this.map = map;
+    this.player = new Player();
+  }
+
+  // Afiseaza toate tiputile de monstrii in map
+  showAllMonsters() {
+    const monsterTypes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+    for (let index = 0; index < monsterTypes.length; index++) {
+      const currentType = monsterTypes[index];
+      const monster = new Monster(currentType);
+      const { top, left } = Game.getRandomTopAndLeft();
+      monster.show(map, top, left);
+    }
+  }
+
+  registerMovementPlayer() {
+    document.addEventListener("keydown", (event) => {
+      // putem face o functie care sa returneze top,left modificat
+      switch (event.key) {
+        case "ArrowUp":
+          this.player.moveUp();
+          break;
+        case "ArrowDown":
+          this.player.moveDown()
+          break;
+        case "ArrowLeft":
+          this.player.moveLeft()
+          break;
+        case "ArrowRight":
+          this.player.moveRight()
+          break;
+        default:
+      }
+
+    });
+
+  }
+
+  start() {
+    this.player.show(this.map);
+    this.showAllMonsters();
+    this.registerMovementPlayer();
+  }
+}
+
+const map = document.querySelector('.map');
+
+const game = new Game(map);
+game.start()
+
+
