@@ -1,4 +1,4 @@
-import join from 'lodash/join'
+import { doWork } from './file1';
 console.log('app start')
 
-console.log(join(['a', 'b', 'c'], '~'))
+doWork();
