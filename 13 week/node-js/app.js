@@ -9,3 +9,8 @@ console.log(100+34)
 
 // Ce este npm?
 // O aplicatie scrisa in javascript care se ocupa de gestionarea packages
+
+// Pentru a folosi npm va trebuie sa rulam: npm init
+const partition = require('lodash/partition');
+const result = partition([1, 2, 3, 4], n => n % 2);
+console.log(result)
