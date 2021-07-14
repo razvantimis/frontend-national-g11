@@ -5,4 +5,4 @@
 3.  Un player nu poate iesi inafara gameContainer ( de la punctul 1)
 4.  Adaugati monstrii,pusi random in container. Acesti vor fi de mai multe tipuri
 5.  Monstru se misca random prin container ( cauta playerul )
-6.  Player daca intalneste un monstru va va omorat
+6.  Player daca intalneste un monstru sa omorat

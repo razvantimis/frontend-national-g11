@@ -1,5 +1,3 @@
-
-
 import MoveHtmlElement from './MoveHtmlElement'
 
 const Direction = {
