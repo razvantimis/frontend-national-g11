@@ -8,6 +8,7 @@ https://javascript.info/modules-intro
   Steps create new project: 
     1. Folder gol 
     2. In terminal rulam 'npm init'
+  Exemplu de package - https://github.com/bendrucker/parse-int
 3. Webpack - https://webpack.js.org/ - Un Tool pentru code de js
 4. SPA
 
