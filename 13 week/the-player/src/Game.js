@@ -32,8 +32,8 @@ class Game {
     this.map = map;
     this.player = new Player();
     this.monsterList = []
-    // const monsterTypes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-    const monsterTypes = [1]
+    const monsterTypes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    // const monsterTypes = [1]
     for (let index = 0; index < monsterTypes.length; index++) {
       this.monsterList.push(new Monster(monsterTypes[index]))
     }
