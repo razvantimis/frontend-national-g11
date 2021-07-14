@@ -32,6 +32,15 @@ class MoveHtmlElement {
     }
   }
 
+  getCordonates(){
+    const top = parseInt(this.htmlElement.style.top, 10);
+    const left = parseInt(this.htmlElement.style.left, 10);
+    return {
+      left: left, 
+      top: top,
+    }
+  }
+
   moveUp() {
     this.moveHtmlLogic((top, left) => {
       const nextTop = top - this.step;

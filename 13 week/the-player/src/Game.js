@@ -75,12 +75,45 @@ class Game {
   // - daca monstru face x numar de pasii atunci sa schimbam directia
 
   monstersStart() {
-    setInterval(() => {
+    this.gameIntervalId = setInterval(() => {
       // Parcurge lista de monstri si le spuna sa pornesca la fiecare 300ms
       this.monsterList.forEach(monster => {
         monster.run();
       });
+      /// aici verificam daca este gameOver
+      if (this.isPlayerIntersectWithMonster()) {
+        console.log('Game over');
+        clearInterval(this.gameIntervalId);
+        alert('Game over')
+      }
     }, 300)
+  }
+
+  // Verifica daca player este in acelasi loc cu un monstru 
+  // Returneaza true daca da
+  isPlayerIntersectWithMonster() {
+    // Cum obtiem cordonatele de la player si monstru
+    const playerCordonates = this.player.getCordonates();
+    const monstersCordonates = this.monsterList.map(monster => {
+      return monster.getCordonates();
+    });
+
+    // Vream sa stim daca unul dintre monstri se intersecteaza cu playerule
+
+    const isIntersect = monstersCordonates.some(monsterCordonates => {
+      // daca un monstru se intersecteaza cu playerul
+      if (
+        monsterCordonates.top === playerCordonates.top &&
+        monsterCordonates.left === playerCordonates.left
+      ) {
+        return true;
+      }
+      return false;
+    })
+
+    return isIntersect;
+
+
   }
 
   start() {
