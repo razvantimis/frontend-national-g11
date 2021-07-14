@@ -13,6 +13,7 @@ class Player extends MoveHtmlElement {
 
   constructor() {
     super(40, Player.create())
+    
   }
 
   show(map) {
