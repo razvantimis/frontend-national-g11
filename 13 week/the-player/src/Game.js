@@ -70,11 +70,15 @@ class Game {
 
   }
 
-  monstersRun() {
+  // Monstru se misca random prin container ( cauta playerul )
+  // Solutia2: Se misca in continu dar isi schimba directia la un momendat
+  // - daca monstru face x numar de pasii atunci sa schimbam directia
+
+  monstersStart() {
     setInterval(() => {
-      // Cum putem accesa mostrii
+      // Parcurge lista de monstri si le spuna sa pornesca la fiecare 300ms
       this.monsterList.forEach(monster => {
-        monster.moveUp();
+        monster.run();
       });
     }, 300)
   }
@@ -83,7 +87,7 @@ class Game {
     this.player.show(this.map);
     this.showAllMonsters();
     this.registerMovementPlayer();
-    this.monstersRun()
+    this.monstersStart()
   }
 }
 
