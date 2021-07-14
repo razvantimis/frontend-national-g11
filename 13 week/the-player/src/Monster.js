@@ -49,9 +49,9 @@ class Monster extends MoveHtmlElement {
   // Aici facem logica de miscare a monstrului
   // Si schimbare de directii
   // Solutia: 
-  // 1. tot la 5 pasii se schimba directia 
+  // 1. tot la 5 pasi se schimba directia 
   // - numarul de pasi facuti de monstru este defapt de cate ori apelam run
-  //   - am pus pe this o proprietate stepCount
+  // - am pus pe this o proprietate stepCount
   // 2. Sa alegem random directia noua (excludem directia actuala)
   //  2.1 Sa alegem random o directie (excludem directia actuala) - facem o metoda
   //  2.2 Sa facem o metoda care primesc directia ca sa parametru si va misca monstru conform directiei
