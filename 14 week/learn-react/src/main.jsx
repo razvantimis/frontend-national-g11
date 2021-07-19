@@ -1,5 +1,6 @@
 
-import './exemples/01 - hello world';
+// import './exemples/01 - hello world';
+import './exemples/02 - post'
 
 
 
