@@ -13,6 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Creaza obiect de tip React
+// Virtual DOM 
 const helloWorldReact = React.createElement('h1', null, "Hello World with React")
 
 // Unde afisam obiectele de tip React in DOM (aici se foloseste DOM API)
