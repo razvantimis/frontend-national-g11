@@ -24,6 +24,19 @@ function Post(props) { // props = {title: "valoare", content: "sda"}
   )
 }
 
+
+class PostCls extends React.Component {
+
+  render() {
+    console.log(this.props)
+    return (
+      <div>
+        <h1>PostCls - {this.props.title}</h1>
+      </div>
+    )
+  }
+}
+
 function App() {
 
   return (
@@ -32,6 +45,8 @@ function App() {
       <Post title="Post2" content="Content 2" isGreen={true || false} />
       <Post title="Post 23" content="Content 23"  />
       <Post title="Post 24" content="Content 24" isGreen />
+
+      <PostCls title="Post class"/>
     </div>
   )
 }
