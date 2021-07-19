@@ -3,7 +3,8 @@
 // import './exemples/02 - post'
 // import './exemples/03 - components';
 // import './exemples/04 - components with props';
-import './exemples/05 - events';
+// import './exemples/05 - events';
+import './exemples/06 - state';
 
 
 
