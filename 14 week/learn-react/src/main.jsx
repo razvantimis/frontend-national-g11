@@ -1,7 +1,8 @@
 
 // import './exemples/01 - hello world';
 // import './exemples/02 - post'
-import './exemples/03 - components';
+// import './exemples/03 - components';
+import './exemples/04 - components with props';
 
 
 
