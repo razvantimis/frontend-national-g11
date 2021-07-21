@@ -1,13 +1,13 @@
-import Koa from 'koa';
-import Router from 'koa-router';
+const Koa = require('koa');
+const Router = require('koa-router');
 const app = new Koa();
 const router = new Router();
-import low from 'lowdb';
-import FileSync from 'lowdb/adapters/FileSync';
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync')
 const adapter = new FileSync('db.json')
 const db = low(adapter)
-import bodyParser from 'koa-bodyparser';
-import cors from '@koa/cors';
+const bodyParser = require('koa-bodyparser');
+const cors = require('@koa/cors');
 
 app.use(cors());
 app.use(bodyParser());
