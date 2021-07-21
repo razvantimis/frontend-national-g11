@@ -71,29 +71,52 @@ function App() {
 
 
 // 2. Daca dam click pe un element dispare (advanced)
-// Daca dam click pe GameObject vrem sa dispara de tot
+// Daca dam click pe GameObject vrem sa dispara de tot ( adica il stergem in array )
 // Daca dam click pe general new object se adauga un nou patrat (GameObject)
 class GameObject extends React.Component {
 
   render() {
     return (
-      <div style={{ height: 50, width: 50, backgroundColor: 'red' }}></div>
+      <div
+        style={{ height: 50, width: 50, backgroundColor: 'red' }}
+        onClick={() => {
+          this.props.clickCallBack();
+        }}
+      >
+        Demo
+      </div>
     )
   }
 }
-class AppExemple2 extends React.Component {
+class AppGameObject extends React.Component {
 
   constructor(props) {
     super(props);
     // this.arrayGameObjects = [<GameObject />, <GameObject />]
     // Daca vream rerandarea componentei trebuie sa folosim statul
     this.state = {
-      arrayGameObjects: [<GameObject />, <GameObject />]
+      arrayOfNumberObject: [
+        1,
+        2
+      ]
     }
 
   }
 
+  handleClickGameObject(gameNumber) {
+    console.log('handleClickGameObject:sa dat click', gameNumber)
+
+    // Facem o copie a arrayOfNumberObject
+    // Filtram toate numerele care sunt diferite de gameNumber
+    const newArray = this.state.arrayOfNumberObject.filter(number => number !== gameNumber);
+
+    // Facem update la state
+    this.setState({arrayOfNumberObject: newArray});
+
+  }
+
   generateNewGameObject = () => {
+    // daca nu este arrow function atunci se pierde this aici in interior
     console.log('generateNewGameObject')
     // this.arrayGameObjects.push(<GameObject />)
     // this.setState({arrayGameObjects: [
@@ -101,7 +124,7 @@ class AppExemple2 extends React.Component {
     //   <GameObject />
     // ]})
     this.setState({
-      arrayGameObjects: this.state.arrayGameObjects.concat([<GameObject />])
+      arrayOfNumberObject: this.state.arrayOfNumberObject.concat([this.state.arrayOfNumberObject.length + 1])
     })
   }
 
@@ -113,7 +136,16 @@ class AppExemple2 extends React.Component {
           justifyContent: 'space-around',
           padding: 40,
         }}>
-          {this.state.arrayGameObjects}
+          {this.state.arrayOfNumberObject.map((number) => { // number = 1, 2, 3...
+            return ( // number = 1
+              <GameObject
+                clickCallBack={() => {
+                  console.log(this)
+                  this.handleClickGameObject(number)
+                }}
+              />
+            )
+          })}
         </div>
         <button
           onClick={this.generateNewGameObject}
@@ -127,6 +159,6 @@ class AppExemple2 extends React.Component {
 
 
 ReactDOM.render(
-  <AppExemple2 />,
+  <AppGameObject />,
   document.getElementById('root')
 )
