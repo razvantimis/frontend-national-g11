@@ -24,7 +24,7 @@ class CounterApp extends React.Component {
     return (
       <div>
         <h1>Statul: {this.state.counter}</h1>
-        <button onClick={() => this.pressButton()}>Click here</button>
+        <button onClick={() => this.pressButton()}>Increment button</button>
       </div>
     )
 
@@ -45,6 +45,6 @@ function CounterAppHooks() {
 
 
 ReactDOM.render(
-  <CounterAppHooks />,
+  <CounterApp initValue={20} />,
   document.getElementById('root')
 )
