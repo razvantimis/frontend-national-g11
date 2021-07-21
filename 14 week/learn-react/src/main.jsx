@@ -5,7 +5,8 @@ import './index.css'
 // import './exemples/03 - components';
 // import './exemples/04 - components with props';
 // import './exemples/05 - events';
-import './exemples/06 - state';
+// import './exemples/06 - state';
+import './exemples/07 - condition render';
 
 
 
