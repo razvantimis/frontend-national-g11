@@ -1,0 +1,51 @@
+/* selector tag html, class, id , * */
+
+/* selecteaza toate elementele */
+* {
+  /* margin: 0;
+  padding: 0; */
+}
+
+
+
+html {
+  font-size: 15px;
+}
+
+h1 {
+  color: #e21474e3;
+  background: rgb(231, 231, 231);
+
+  /* font-size: 30px; */
+  /* rem => 1.5 * font-size de la tag-ul html ( root element ) */
+  font-size: 1.5rem;
+  /* 1.5 * 20 */
+  /* em => 1.5 * font-size de la parinte */
+  font-size: 1.5em;
+
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+.articol {
+  color: yellow;
+  background-color: red;
+}
+
+.articol-cooking {
+  background-color: green;
+}
+
+.articol-travel {}
+
+#my-post1 {
+  background-color: blue;
+}
+
+/* selectori multipli */
+.articol-test,
+#my-post1 {
+  background-color: gray;
+}

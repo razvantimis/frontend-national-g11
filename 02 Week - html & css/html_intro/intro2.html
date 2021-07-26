@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Inputuri</h1>
+
+  <form action="post.html" method="post">
+    <label>Username</label>
+    <input type="text" name="username" placeholder="Aici pui username" />
+    <label>Password</label>
+    <input type="password" name="password" />
+
+    <input type="submit" value="Submit" />
+    <input type="reset" value="Reset" />
+  </form>
+
+  <h1>Checkbox</h1>
+
+  <input type="checkbox" name="fruit" value="apple" />
+  <input type="checkbox" name="fruit" value="apple" />
+
+  <h1>Radio group</h1>
+  <input type="radio" name="city" value="Cluj" />
+  <input type="radio" name="city" value="Huedin" />
+
+
+  <h1>Dropdown</h1>
+  <!-- Daca selectam Intermediate se pun in query params level=2  -->
+  <form>
+    <select name="level">
+      <optgroup label="Level">
+        <option value="1" selected>Beginner</option>
+        <option value="2">Intermediate</option>
+        <option value="3">Advanced</option>
+      </optgroup>
+      <optgroup label="Test">
+        <option>Diplodocus</option>
+        <option>Saltasaurus</option>
+        <option>Apatosaurus</option>
+      </optgroup>
+    </select>
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+
+</html>
