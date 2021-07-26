@@ -6,6 +6,8 @@ window.onload = function () {
     widthOutput = document.querySelector('#width');
 }
 
+
+// also can use this event listener to wait for content loading
 //document.addEventListener('DOMContentLoaded', function() {
 //    
 // })
@@ -15,6 +17,7 @@ function resize() {
     widthOutput.textContent = window.innerWidth;
 }
 
-// window.onresize = resize;
 
 window.addEventListener('resize', resize);
+// is the same as adding an event listener to the window
+// window.onresize = resize;
