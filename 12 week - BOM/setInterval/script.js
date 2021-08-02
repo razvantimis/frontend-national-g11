@@ -1,5 +1,13 @@
 var intervalId;
 
+function stop() {
+    clearInterval(intervalId);
+}
+
+function start() {
+    changeColor();
+}
+
 function changeColor() {
     intervalId = window.setInterval(flashText, 1000);
 }
@@ -7,12 +15,4 @@ function changeColor() {
 function flashText() {
     var helloText = document.getElementById('hello');
     helloText.style.color = helloText.style.color === 'red' ? 'blue' : 'red';
-}
-
-function stopTextColor() {
-    clearInterval(intervalId);
-}
-
-function startTextColor() {
-    changeColor();
 }
