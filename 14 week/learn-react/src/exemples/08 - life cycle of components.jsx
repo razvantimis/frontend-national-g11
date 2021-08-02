@@ -43,6 +43,8 @@ class MyComponent extends React.Component {
 
 // 1. Digital timer ( setInterval)
 
+
+
 function App() {
   return (
     <div>
