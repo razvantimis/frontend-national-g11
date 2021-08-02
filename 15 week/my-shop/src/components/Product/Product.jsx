@@ -7,7 +7,7 @@ const Product = (props) => {
     <div className="product">
       <img src={props.image} width="150" />
       <h2>{props.title}</h2>
-      <h3>Price:{props.price}</h3>
+      <h3>Price:{props.price} Lei</h3>
     </div>
   )
 }
