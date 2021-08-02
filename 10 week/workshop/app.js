@@ -51,6 +51,7 @@ class Car {
     // Arrow function imprumuta this de mai sus
     this.carElement.addEventListener("click", () => {
       //console.log(this); // sa fie this de mai sus
+      // facei tot false
       this.active = !this.active;
       // console.log(this.active);
       this.carElement.style.background = this.active ? "grey" : "white";
