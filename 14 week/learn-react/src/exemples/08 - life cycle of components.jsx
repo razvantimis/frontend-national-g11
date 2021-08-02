@@ -5,8 +5,6 @@ import ReactDOM from 'react-dom';
 // Life cycle - ciclu de viata a unei componenta din prespectiva afisari ei in UI
 
 class MyComponent extends React.Component {
-
-
   // 0. Se creeaza componenta => se apeleaza constructorul
   constructor(props) {
     super(props);
@@ -29,8 +27,6 @@ class MyComponent extends React.Component {
   componentDidUpdate(nextProps, nextState) {
 
   }
-
-
 
   render() {
 
@@ -90,7 +86,6 @@ class DigitalTimer extends React.Component {
     // trebuie sa oprim timerul ( clearInterval )
     clearInterval(this.intervalId);
   }
-
 
 
   render() {
