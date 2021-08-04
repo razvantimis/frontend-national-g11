@@ -4,14 +4,29 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import './App.css';
 
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 function App() {
 
   return (
-    <div className="App">
-      <Header />
-      <Home />
-      <Cart />
-    </div>
+    <BrowserRouter>
+      {/* https://reactjs.org/docs/context.html */}
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route path="/myCart">
+            <Cart />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   )
 }
 

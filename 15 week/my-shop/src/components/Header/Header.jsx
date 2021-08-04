@@ -1,5 +1,8 @@
 import React from 'react';
 import './Header.css';
+import {
+  Link
+} from "react-router-dom";
 
 const Header = () => {
 
@@ -7,8 +10,8 @@ const Header = () => {
     <div className="header-container">
       <h1>MyLogo</h1>
       <nav>
-        <a href="/"><button>Home</button></a>
-        <a href="/myCart"><button>MyCart</button></a>
+        <Link to="/"><button>Home</button></Link>
+        <Link to="/myCart"><button>MyCart</button></Link>
       </nav>
     </div>
   )
