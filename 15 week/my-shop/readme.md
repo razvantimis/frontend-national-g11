@@ -7,8 +7,8 @@
         - de unde vin datele? https://fakestoreapi.com/docs
         - cum le afisam? fiecare produs sa aiba pret, imagine si titlu
     - avem un cos de cumparaturi , user poate adauga produsele care le vede
+        - Cum afisam lista de produse adaugate? sa avem o pagina cart
         - Cum se adauga produsul?
-        - Cum afisam lista de produse adaugate?
 3. Implementare cod
     - Incepem cu layout app + empty pages/components
     - Se ia o cerinta si se implementeaza
