@@ -60,7 +60,13 @@ class Home extends React.Component {
     }
 
     return productList.map(productItem => {
-      return (<Product title={productItem.title} price={productItem.price} image={productItem.image} />)
+      return (<Product
+        title={productItem.title}
+        price={productItem.price}
+        image={productItem.image}
+        onAddToCart={() => {
+          console.log("add product", productItem)
+        }} />)
     })
 
   }
