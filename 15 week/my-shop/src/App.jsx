@@ -21,6 +21,9 @@ function App() {
           <Route path="/myCart">
             <Cart />
           </Route>
+          <Route path="/test">
+            My test router
+          </Route>
           <Route path="/">
             <Home />
           </Route>
