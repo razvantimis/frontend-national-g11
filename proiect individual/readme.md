@@ -13,8 +13,9 @@ Detalii despre proiect le gasiti in project.pdf
     - cum ati facut task-urile in trello
     - partea de design facuta in figma
 
-## Recomandari tech
+## Tech
 
+0. Faceti un repo nou de github unde veti pune tot codul de la proiect ( sa cititi si despre github pages tot aici)
 1.  Proiectul poate fi facut cu react sau cu vanilla jS
     - Daca alegi react atunci va fi obligatoriu sa:
         - generati proiectul cu vite ( cum sa facut la curs )
