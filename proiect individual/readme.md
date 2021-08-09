@@ -19,7 +19,7 @@ Detalii despre proiect le gasiti in project.pdf
 1. Proiectul poate fi facut cu react sau cu vanilla jS
     - Daca alegi react atunci va fi obligatoriu sa:
         - generati proiectul cu vite ( cum sa facut la curs )
-        - stuctura proiectului( folderele si conventile) sa fie asemanatoare cu my shop
+        - structura proiectului( folderele si conventile) sa fie asemanatoare cu my shop
         - pentru deploy cu github pages sa urmati https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
     - Daca alegi vanilla js va fi obligatoriu sa:
         - aveti cate un fisiere html si unul js pentru fiecare pagina din site, cu acelasi nume ( optional home.css daca este cazul ). De exemplu home.html/home.js/home.css
