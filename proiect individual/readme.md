@@ -16,7 +16,7 @@ Detalii despre proiect le gasiti in project.pdf
 ## Tech
 
 0. Faceti un repo nou de github unde veti pune tot codul de la proiect ( sa cititi si despre github pages tot aici)
-1.  Proiectul poate fi facut cu react sau cu vanilla jS
+1. Proiectul poate fi facut cu react sau cu vanilla jS
     - Daca alegi react atunci va fi obligatoriu sa:
         - generati proiectul cu vite ( cum sa facut la curs )
         - stuctura proiectului( folderele si conventile) sa fie asemanatoare cu my shop
