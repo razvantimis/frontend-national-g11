@@ -11,7 +11,7 @@ const Product = (props) => {
       <img src={props.image} width={props.width || '150'} />
       <h2>{props.title}</h2>
       <h3>Price:{props.price} Lei</h3>
-      {props.onAddToCart && <button onClick={props.onAddToCart}>Add to cart</button>}
+      {props.onAddToCart ? <button onClick={props.onAddToCart}>Add to cart</button> : null}
     </div>
   )
 }

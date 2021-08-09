@@ -65,9 +65,9 @@ class Home extends React.Component {
         price={productItem.price}
         image={productItem.image}
         onAddToCart={() => {
-          console.log("add product", productItem)
+          this.props.onAddToCart(productItem)
         }} />)
-    })
+    });
 
   }
 
