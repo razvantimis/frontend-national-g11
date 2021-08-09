@@ -26,7 +26,7 @@ Detalii despre proiect le gasiti in project.pdf
         - sa folositi import/export. Deci codul care este folosit in mai multe pagini va trebui sa-l puneti intr-un fisier separat
 2. Va recomand sa includeti proiectele facut pana acum in timpul cursului ( fiecare proiect sa fie pe un repo de github separat si puneti o poza cu link catre github)
 3. Legat de design va rog sa va faceti in figma o varianta. Va puneti insipra din orice resurse pe net , cum ar fi https://madza.hashnode.dev/21-awesome-dev-portfolios-for-your-inspiration sau google it
-4. Partea de js este destul de mica la cei care aleg vanilla js , asa ca puteti sa faceti animati la scroll/click etc sau sa implementati un carusel, orice idee
+4. Partea de js este destul de mica la cei care aleg vanilla js , asa ca puteti sa faceti animati la scroll/click etc sau sa implementati un carusel, orice idee ( https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements )
 
 ## Deadline 28.08.2021
 
