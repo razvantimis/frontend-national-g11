@@ -26,8 +26,21 @@ function App() {
   const handleAddProductToCart = (product) => {
     // facem logica de adaugare 
 
+    console.log('handleAddProductToCart', product);
+
+    const newList = [...cartList]
+
+    const index = newList.findIndex(item => item.id === product.id);
+    if (index !== -1) {
+      newList[index].quantity++;
+      console.log(newList[index]);
+    } else {
+      product.quantity = 1;
+      newList.push(product);
+    }
     // facem update la state cartList
     // setCartList(noua valoare)
+    setCartList(newList);
   }
 
   return (
@@ -45,8 +58,11 @@ function App() {
           <Route path="/">
             <Home
               onAddToCart={(product) => {
-                console.log("app", product)
+                // console.log("app", product)
+                handleAddProductToCart(product)
               }}
+
+              // onAddToCart={handleAddProductToCart}
             />
           </Route>
         </Switch>
